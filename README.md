@@ -24,3 +24,17 @@ https://yuml.me/diagram/scruffy/usecase/samples
 [Funcionário]-(Excluir cadastro de acesso)
 ```
 
+## Diagrama de Atividades
+
+Descreve o sistema de reconhecimento de faces para permitir a entrada ou cadastrar uma pessoa no linf.
+
+![Diagrama atividade](diagrama_atividade.png)
+
+Código fonte:
+
+https://yuml.me/diagram/nofunky/activity/samples
+
+```
+(start)->(Reconhecer_Face)-><a>[Ok]->(Permite_Acesso_Linf),
+<a>[Nao_identificado]->(Digita_login_senha)->(Atualiza_Cadastro)->(Permite_Acesso_Linf)->(end)
+```
