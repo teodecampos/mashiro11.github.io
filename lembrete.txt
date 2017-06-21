@@ -1,0 +1,8 @@
+1 - Ler Instruções do trabalho moodle
+	fonte: 
+	Página inicialMeus cursosCampus Darcy RibeiroInstituto de Ciências ExatasCiência ComputaçãoTP1-A29 maio - 4 junhoTrabalho 2
+	https://aprender.ead.unb.br/mod/assign/view.php?id=232550
+2 - Rodar detecção e reconhecimento em C++
+
+3 - atualizar README
+
