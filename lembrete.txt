@@ -3,6 +3,10 @@
 	Página inicialMeus cursosCampus Darcy RibeiroInstituto de Ciências ExatasCiência ComputaçãoTP1-A29 maio - 4 junhoTrabalho 2
 	https://aprender.ead.unb.br/mod/assign/view.php?id=232550
 2 - Rodar detecção e reconhecimento em C++
-
+	-Exemplo reconhecimento de face testado
+		http://docs.opencv.org/master/da/d60/tutorial_face_main.html#tutorial_face_lbph_use
+	-Faltou um include "opencv2/face.hpp" que não está instalado na minha maquina
+		https://github.com/opencv/opencv_contrib	
+	-Não consegui instalar usando esse repositorio
 3 - atualizar README
 
