@@ -1,6 +1,16 @@
 # projetoTP1_2
 Projeto final disciplina Técnicas de Programação 1 
 
+O reconhecimento facial é uma das técnicas mais utilizadas na biometria tanto para a segurança da informação como para segurança de nossa sociedade. 
+
+Este trabalho implementa um software que reconhece uma imagem retirada através de um webcam ou câmera para reconhecer suas características e compará-las com as de um banco de dados. 
+
+Foi utilizada a biblioteca OpenCV, biblioteca para a utilização de processamento de imagens de grande eficácia e por obter excelentes resultados no reconhecimento de características utilizando os HaarCascade. O software foi
+desenvolvido em c++.
+
+> Versões utilizadas: ...
+
+
 ## Diagrama Casos de uso
 
 Esse diagrama foi feito pensando nos principais atores presentes no laboratório.
