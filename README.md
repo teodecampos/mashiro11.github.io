@@ -43,7 +43,7 @@ https://yuml.me/diagram/nofunky/activity/samples
 
 Primeiro diagrama de sequência 
 
-![Diagrama de sequencia]diagrama_sequencia.png
+![Diagrama de sequencia](diagrama_sequencia.png)
 
 Fonte:
 
