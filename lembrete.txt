@@ -9,4 +9,14 @@
 		https://github.com/opencv/opencv_contrib	
 	-Não consegui instalar usando esse repositorio
 3 - atualizar README
+	- Criação do texto introdutorio - Em processo
+4 - Links úteis
+	Exemplos de classes em c++
+	http://eyalarubas.com/face-detection-and-recognition.html
+	https://github.com/EyalAr/Person-Recognizer
 
+	Uso de OpenCV e OpenFACE
+	http://www.dobitaobyte.com.br/reconhecimento-facial-com-opencv-e-openface/
+
+	em python, só por curiosidade. Parece mais detalhado o reconhecimento,  
+	http://www.pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/
