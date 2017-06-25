@@ -28,7 +28,7 @@ public:
 	*	\param nome Nome do usuario.
 	*	\param matricula Matricula do usuario
 	*/
-	Usuario(string nome, string matricula);
+	Usuario(string matricula, string nome);
 
 	/*!
 	*	\brief Construtor de cópia.

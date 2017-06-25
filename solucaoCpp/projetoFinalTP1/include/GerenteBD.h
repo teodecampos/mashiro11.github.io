@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
+#include <map>
 #include "Usuario.h"
 
 /*!
@@ -16,6 +18,11 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::ofstream;
+using std::ifstream;
+using std::getline;
+using std::stringstream;
+using std::map;
+
 
 class GerenteBD
 {
@@ -32,8 +39,11 @@ public:
 
 	/*!
 	*	\brief Busca um usuário no banco de dados.
+	*
+	*	\param matricula Matricula do usuario
+	*	\return Objeto usuario
 	*/
-	void BuscaUsuario();
+	static Usuario BuscaUsuario(string matricula);
 	
 	/*!
 	*	\brief Atualiza um usuário no banco de dados.
@@ -44,9 +54,14 @@ public:
 	*	\brief Remove um usuário do banco de dados.
 	*/
 	void RemoveUsuario();
+
+	/*!
+	*	\brief Verifica a existencia de usuario.
+	*/
+	static bool ExisteUsuario(string matricula);
 private:
 	static string dbName;
-
+	static map<string, string> dadosUsuarios;
 };
 
 #endif

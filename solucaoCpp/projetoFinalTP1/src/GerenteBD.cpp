@@ -8,15 +8,31 @@
 #endif
 
 string GerenteBD::dbName("");
+map<string, string> GerenteBD::dadosUsuarios;
 
 GerenteBD::GerenteBD()
 {
-DEBUG_PRINT("GerenteDB::() - inicio")
+	DEBUG_PRINT("GerenteDB::() - inicio");
 	
 	dbName = "myDB";
-	//sqlite3_open(dbName.c_str(), &db);
+	string registro;
+	string matricula;
+	string nome;
+	ifstream usuarios(dbName + ".txt");
+	while (!usuarios.eof()) {
+		stringstream aux;
+		getline(usuarios, registro);
+		aux << registro;
+		aux >> matricula;	//extraindo informações posicionais de cada registro
+		aux >> nome;		//pode ser feito assim
+		dadosUsuarios[matricula] = nome;	//como por enquanto só tem o nome, fica só o nome mapeado pela matricula
+	}
+	for (map<string,string>::iterator it = dadosUsuarios.begin(); it != dadosUsuarios.end(); it++) {
+		cout << "Chave: " << it->first << endl;
+		cout << "	Valor: " << it->second << endl;
+	}
 
-DEBUG_PRINT("GerenteDB::() - fim")
+	DEBUG_PRINT("GerenteDB::() - fim");
 }
 
 
@@ -40,10 +56,17 @@ DEBUG_PRINT("GerenteBD::AtualizaUsuario() - inicio")
 DEBUG_PRINT("GerenteBD::AtualizaUsuario() - fim")
 }
 
-void GerenteBD::BuscaUsuario() {
-DEBUG_PRINT("GerenteBD::BuscaUsuario() - inicio")
-
+Usuario GerenteBD::BuscaUsuario(string matricula) {
+	DEBUG_PRINT("GerenteBD::BuscaUsuario() - inicio")
+		return Usuario(matricula , dadosUsuarios[matricula]);	//como por enquanto é só matricula e nome, td ok
 DEBUG_PRINT("GerenteBD::BuscaUsuario() - fim")
+}
+
+bool GerenteBD::ExisteUsuario(string matricula) {
+	if (dadosUsuarios.find(matricula) != dadosUsuarios.end())
+		return true;
+	else return false;
+
 }
 
 void GerenteBD::RemoveUsuario() {

@@ -4,7 +4,7 @@ Usuario::Usuario() {
 
 }
 
-Usuario::Usuario(string nome, string matricula) {
+Usuario::Usuario(string matricula, string nome) {
 	this->nome = nome;
 	this->matricula = matricula;
 }

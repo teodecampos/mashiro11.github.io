@@ -8,10 +8,11 @@ SistemaLinf::SistemaLinf() {
 void SistemaLinf::Run() {
 	string matricula;
 	cout << "Rodando Sistema" << endl;
+	cout << "Insira a matricula: ";
 	cin >> matricula;
 	Usuario usuario(GLog.Credencia(matricula));
 	if (usuario.GetNome() != "") {//usuario cadastrado
-		cout << "Usuario cadastrado" << endl;
+		cout << "Usuario logado com sucesso" << endl;
 	}
 	else {//usuario não cadastrado
 		cout << "Usuario nao cadastrado" << endl;

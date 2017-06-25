@@ -39,23 +39,31 @@ DEBUG_PRINT("GerenteLogin::_entradaTeclado - fim")
 }
 
 Usuario GerenteLogin::Credencia(string matricula) {
-	Usuario usuario("", matricula);
-	if (false) { //usuario cadastrado
+	Usuario usuario;
+	if ( GerenteBD::ExisteUsuario(matricula) ) { //usuario cadastrado
 		cout << "Usuario cadastrado na base de dados" << endl;
 		if (ReconheceFace(matricula)) {//reconhece o rosto
 			//reconheceu pelo rosto
 			//modifica a instância de usuario
+			usuario = GerenteBD::BuscaUsuario(matricula);
+			cout << "Matricula: " << usuario.GetMatricula() << endl;
+			cout << "Nome: " << usuario.GetNome() << endl;
 			return usuario;
 		}
 		else {//caso nao reconhecido
+			string senha;
 			cout << "Usuario nao reconhecido" << endl;
+			cout << "Digite sua senha: ";
+			cin >> senha;
+			//if(senha é valida)
+				usuario = GerenteBD::BuscaUsuario(matricula);
+				cout << "Matricula: " << usuario.GetMatricula() << endl;
+				cout << "Nome: " << usuario.GetNome() << endl;
+
 			return usuario;
 		}
 	}
-	else {//Usuario nao cadastrado
-		cout << "Usuario nao cadastrado na base de dados" << endl;
-		return usuario;
-	}
+	return usuario;
 }
 
 bool GerenteLogin::ReconheceFace(string matricula) {
