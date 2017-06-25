@@ -22,10 +22,18 @@ string Usuario::GetMatricula() {
 	return matricula;
 }
 
+string Usuario::GetSenha() {
+	return senha;
+}
+
 void Usuario::SetNome(string nome) {
 	this->nome = nome;
 }
 
 void Usuario::SetMatricula(string matricula) {
 	this->matricula = matricula;
+}
+
+void Usuario::SetSenha(string senha) {
+	this->senha = senha;
 }

@@ -1,8 +1,8 @@
 #include "GerenteLogin.h"
 
-#define DEBUG
+//#define DEBUG
 #ifdef DEBUG
-	#define DEBUG_PRINT(x) do{cout << x << endl;}while(0);
+	#define DEBUG_PRINT(x) do{cout << x << endl;}while(0)
 #else
 	#define DEBUG_PRINT(x)  
 #endif
@@ -17,15 +17,15 @@ GerenteLogin::~GerenteLogin()
 }
 
 void GerenteLogin::Iniciar() {
-DEBUG_PRINT("GerenteLogin::Iniciar - inicio")
+	DEBUG_PRINT("GerenteLogin::Iniciar - inicio");
 	//tenta fazer login via _entradaWebcam().
 	//se não conseguir, faz via teclado
 	_entradaTeclado();
-DEBUG_PRINT("GerenteLogin::Iniciar - fim")
+	DEBUG_PRINT("GerenteLogin::Iniciar - fim");
 }
 
 void GerenteLogin::_entradaTeclado() {
-DEBUG_PRINT("GerenteLogin::_entradaTeclado - inicio")
+	DEBUG_PRINT("GerenteLogin::_entradaTeclado - inicio");
 	//pega as informações MATRICULA e SENHA via teclado
 	//envia a interface de persistência para tentar efetuar login
 	
@@ -35,19 +35,20 @@ DEBUG_PRINT("GerenteLogin::_entradaTeclado - inicio")
 	cout << "Matricula inserida: " << mat << endl;
 	cin >> mat;
 
-DEBUG_PRINT("GerenteLogin::_entradaTeclado - fim")
+	DEBUG_PRINT("GerenteLogin::_entradaTeclado - fim");
 }
 
 Usuario GerenteLogin::Credencia(string matricula) {
+	DEBUG_PRINT("GerenteLogin::Credencia - inicio");
 	Usuario usuario;
 	if ( GerenteBD::ExisteUsuario(matricula) ) { //usuario cadastrado
-		cout << "Usuario cadastrado na base de dados" << endl;
+		DEBUG_PRINT("	Usuario cadastrado na base de dados");
 		if (ReconheceFace(matricula)) {//reconhece o rosto
 			//reconheceu pelo rosto
 			//modifica a instância de usuario
 			usuario = GerenteBD::BuscaUsuario(matricula);
-			cout << "Matricula: " << usuario.GetMatricula() << endl;
-			cout << "Nome: " << usuario.GetNome() << endl;
+			DEBUG_PRINT("		Matricula: " << usuario.GetMatricula());
+			DEBUG_PRINT("		Nome: " << usuario.GetNome());
 			return usuario;
 		}
 		else {//caso nao reconhecido
@@ -55,14 +56,15 @@ Usuario GerenteLogin::Credencia(string matricula) {
 			cout << "Usuario nao reconhecido" << endl;
 			cout << "Digite sua senha: ";
 			cin >> senha;
-			//if(senha é valida)
+			if (GerenteBD::ChecaUsuario(matricula, senha)) {
 				usuario = GerenteBD::BuscaUsuario(matricula);
-				cout << "Matricula: " << usuario.GetMatricula() << endl;
-				cout << "Nome: " << usuario.GetNome() << endl;
-
+				DEBUG_PRINT("		Matricula: " << usuario.GetMatricula());
+				DEBUG_PRINT("		Nome: " << usuario.GetNome());
+			}
 			return usuario;
 		}
 	}
+	DEBUG_PRINT("GerenteLogin::Credencia - fim");
 	return usuario;
 }
 

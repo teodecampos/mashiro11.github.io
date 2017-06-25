@@ -41,7 +41,7 @@ public:
 	*	\brief Busca um usuário no banco de dados.
 	*
 	*	\param matricula Matricula do usuario
-	*	\return Objeto usuario
+	*	\return Objeto usuario com os campos preenchidos
 	*/
 	static Usuario BuscaUsuario(string matricula);
 	
@@ -57,8 +57,18 @@ public:
 
 	/*!
 	*	\brief Verifica a existencia de usuario.
+	*	\param matricula Matricula de usuario.
+	*	\return true caso a matricula exista no banco.
 	*/
 	static bool ExisteUsuario(string matricula);
+	
+	/*!
+	*	\brief Verifica se a matricula confere com a senha.
+	*	\param matricula Matricula do usuario.
+	*	\param senha Senha a ser testada.
+	*	\return Sretorna true apenas se a matricula existe e está associada à senha.
+	*/
+	static bool ChecaUsuario(string matricula, string senha);
 private:
 	static string dbName;
 	static map<string, string> dadosUsuarios;

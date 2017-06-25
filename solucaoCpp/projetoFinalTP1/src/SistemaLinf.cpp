@@ -1,5 +1,13 @@
 #include "SistemaLinf.h"
 
+//#define DEBUG
+#ifdef DEBUG
+#define DEBUG_PRINT(x) do{cout << x << endl;}while(0)
+#else
+#define DEBUG_PRINT(x)  
+#endif
+
+
 SistemaLinf::SistemaLinf() {
 
 
@@ -7,12 +15,13 @@ SistemaLinf::SistemaLinf() {
 
 void SistemaLinf::Run() {
 	string matricula;
-	cout << "Rodando Sistema" << endl;
+	DEBUG_PRINT("Rodando Sistema");
 	cout << "Insira a matricula: ";
 	cin >> matricula;
 	Usuario usuario(GLog.Credencia(matricula));
 	if (usuario.GetNome() != "") {//usuario cadastrado
-		cout << "Usuario logado com sucesso" << endl;
+		DEBUG_PRINT("Usuario logado com sucesso");
+		cout << "Bem vindo ao sistema, " << usuario.GetNome() << "." << endl;
 	}
 	else {//usuario não cadastrado
 		cout << "Usuario nao cadastrado" << endl;
@@ -32,3 +41,6 @@ void SistemaLinf::Run() {
 	}
 	cin >> matricula;
 }
+#ifdef DEBUG
+#undef DEBUG
+#endif // DEBUG

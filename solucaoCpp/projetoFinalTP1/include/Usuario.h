@@ -16,6 +16,7 @@ class Usuario {
 private:
 	string nome;
 	string matricula;
+	string senha;
 
 public:
 	/*!
@@ -47,6 +48,11 @@ public:
 	string GetMatricula();
 
 	/*!
+	*	\brief Getter do atributo senha.
+	*/
+	string GetSenha();
+
+	/*!
 	*	\brief Setter do atributo nome.
 	*	\param nome Nome designado para instancia.
 	*/
@@ -57,6 +63,12 @@ public:
 	*	\param matricula Matricula designada para instância.
 	*/
 	void SetMatricula(string matricula);
+
+	/*!
+	*	\brief Setter do atributo senha.
+	*	\param senha Senha designada para instância.
+	*/
+	void SetSenha(string senha);
 
 };
 
