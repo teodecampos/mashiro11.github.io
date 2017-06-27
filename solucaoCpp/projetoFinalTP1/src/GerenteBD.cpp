@@ -1,6 +1,6 @@
 #include "GerenteBD.h"
 
-#define DEBUG
+//#define DEBUG
 #ifdef DEBUG
 	#define DEBUG_PRINT(x) do{cout << x << endl;}while(0)
 #else

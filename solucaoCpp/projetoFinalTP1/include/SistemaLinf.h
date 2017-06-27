@@ -20,6 +20,11 @@ class SistemaLinf {
 private:
 	GerenteLogin GLog;
 	GerenteBD GBD;
+	Usuario usuarioLogado;
+
+	void _EfetuaLogin();
+	int _Opcoes();
+	void _NavegaConta();
 public:
 	/*!
 	*	\brief Construtor padrão.
@@ -30,7 +35,6 @@ public:
 	*	\brief Ambiente de execução dos sistema.
 	*/
 	void Run();
-
 };
 
 
