@@ -11,7 +11,7 @@ public:
 	// metodo get
 	std::string getNome();
 	// metodo set
-	void setMatricula( int mat );
+	void setMatricula();
 	// contrutor
 	CaraCracha(std::string);
 protected:

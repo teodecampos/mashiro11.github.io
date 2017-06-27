@@ -13,9 +13,11 @@ std::string CaraCracha::getNome()
 	return nome;
 }
 
-void CaraCracha::setMatricula( int mat )
+void CaraCracha::setMatricula()
 {
-	matricula = mat;
+	std::cout << "matricula: ";
+	std::cin >> matricula;
+	std::cout << std::endl;
 }
 
 
