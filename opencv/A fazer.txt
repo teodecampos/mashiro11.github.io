@@ -1,0 +1,10 @@
+sequencia de acoes do programa
+
+insere matricula
+
+if NÃO existe pasta da matrícula 
+	cria pasta
+	tira 10 foto
+	reescreve fotos.csv
+
+reconhece()
