@@ -4,14 +4,32 @@
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
-#include "Usuario.h"
-#include "GerenteBD.h"
+//#include <vector>
+
+
+#ifdef __linux__ 
+	#include <unistd.h>
+#elif _WIN32
+	#include <windows.h>
+	#include "Usuario.h"
+	#include "GerenteBD.h"
+	#include "opencv2\objdetect\objdetect.hpp"
+	#include "opencv2\imgproc\imgproc.hpp"
+	#include "opencv2\highgui\highgui.hpp"
+	#include "opencv2\videoio\videoio.hpp"
+#endif
+
+
 
 using std::string;
 using std::cout;
 using std::endl;
 using std::cin;
+using std::vector;
+
+using namespace cv;
 
 /*!
 *	\brief \c GerenteLogin é aquela que credencia o usuário.
@@ -62,6 +80,8 @@ private:
 	*	\brief Valida a operação de entrada.
 	*/
 	int _verificaEntrada();//
+
+	void _mySleep(int);
 };
 
 #endif

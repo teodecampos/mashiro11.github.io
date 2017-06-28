@@ -25,6 +25,7 @@ private:
 	void _EfetuaLogin();
 	int _Opcoes();
 	void _NavegaConta();
+	void LimpaTela();
 public:
 	/*!
 	*	\brief Construtor padrão.

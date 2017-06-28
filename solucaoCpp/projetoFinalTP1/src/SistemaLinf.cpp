@@ -20,8 +20,16 @@ void SistemaLinf::Run() {
 	}
 }
 
-void SistemaLinf::_NavegaConta() {
+void SistemaLinf::LimpaTela() {
+#ifdef _WIN32
 	system("cls");
+#elif __linux__
+	system("clear");
+#endif 
+}
+
+void SistemaLinf::_NavegaConta() {
+	LimpaTela();
 	cout << "/************************************************/" << endl;
 	cout << "	Bem vindo ao sistema, " << usuarioLogado.GetNome() << "." << endl;
 	cout << "/************************************************/" << endl;
@@ -60,7 +68,7 @@ int SistemaLinf::_Opcoes() {
 void SistemaLinf::_EfetuaLogin() {
 	string matricula;
 	DEBUG_PRINT("Rodando Sistema");
-	system("cls");
+	LimpaTela();
 	cout << "/******************************/" << endl;
 	cout << "	Tela de Login" << endl;
 	cout << "/******************************/" << endl;
