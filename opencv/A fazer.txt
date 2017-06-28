@@ -1,6 +1,8 @@
 sequencia de acoes do programa
 
-insere matricula
+CaraCracha user("Fulano")
+
+fulano.setMatricula()
 
 if NÃO existe pasta da matrícula 
 	cria pasta
