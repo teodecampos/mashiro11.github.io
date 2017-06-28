@@ -20,3 +20,14 @@
 
 	em python, só por curiosidade. Parece mais detalhado o reconhecimento,  
 	http://www.pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/
+5 - documentação
+cmake criar um makefile com os arquivos do repositorio
+
+doxygen flags para diagramas 
+pagina git hub
+
+diferença entre !brief e ///
+
+!brief para funçao
+/// variavel 
+
