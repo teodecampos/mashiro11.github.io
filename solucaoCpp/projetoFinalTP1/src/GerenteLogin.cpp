@@ -16,34 +16,28 @@ GerenteLogin::~GerenteLogin()
 {
 }
 
-void GerenteLogin::Iniciar() {
-	DEBUG_PRINT("GerenteLogin::Iniciar - inicio");
-	//tenta fazer login via _entradaWebcam().
-	//se não conseguir, faz via teclado
-	_entradaTeclado();
-	DEBUG_PRINT("GerenteLogin::Iniciar - fim");
+Usuario GerenteLogin::NovoUsuario(string matricula) {
+	Usuario usuario;
+	string nome;
+	string senha;
+	cout << "Nome: ";
+	cin >> nome;
+	cout << "Senha: ";
+	cin >> senha;
+	usuario.SetMatricula(matricula);
+	usuario.SetNome(nome);
+	usuario.SetSenha(senha);
+	GerenteBD::InsereUsuario(usuario);
+	return usuario;
 }
 
-void GerenteLogin::_entradaTeclado() {
-	DEBUG_PRINT("GerenteLogin::_entradaTeclado - inicio");
-	//pega as informações MATRICULA e SENHA via teclado
-	//envia a interface de persistência para tentar efetuar login
-	
-	string mat;
-	cout << "Matricula:";
-	cin >> mat;
-	cout << "Matricula inserida: " << mat << endl;
-	cin >> mat;
-
-	DEBUG_PRINT("GerenteLogin::_entradaTeclado - fim");
-}
 
 Usuario GerenteLogin::Credencia(string matricula) {
 	DEBUG_PRINT("GerenteLogin::Credencia - inicio");
 	Usuario usuario;
 	if ( GerenteBD::ExisteUsuario(matricula) ) { //usuario cadastrado
 		DEBUG_PRINT("	Usuario cadastrado na base de dados");
-		if (ReconheceFace(matricula)) {//reconhece o rosto
+		if (_ReconheceFace(matricula)) {//reconhece o rosto
 			//reconheceu pelo rosto
 			//modifica a instância de usuario
 			usuario = GerenteBD::BuscaUsuario(matricula);
@@ -58,6 +52,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 			cin >> senha;
 			if (GerenteBD::ChecaUsuario(matricula, senha)) {
 				usuario = GerenteBD::BuscaUsuario(matricula);
+				_AtualizaBancoDeFotos();
 				DEBUG_PRINT("		Matricula: " << usuario.GetMatricula());
 				DEBUG_PRINT("		Nome: " << usuario.GetNome());
 			}
@@ -68,7 +63,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 	return usuario;
 }
 
-bool GerenteLogin::ReconheceFace(string matricula) {
+bool GerenteLogin::_ReconheceFace(string matricula) {
 
 	if (false) {//caso reconheça pelo rosto
 		cout << "Usuario reconhecido" << endl;
@@ -78,6 +73,10 @@ bool GerenteLogin::ReconheceFace(string matricula) {
 		cout << "Rosto nao reconhecido" << endl;
 		return false;
 	}
+
+}
+
+void GerenteLogin::_AtualizaBancoDeFotos() {
 
 }
 
@@ -135,14 +134,6 @@ void GerenteLogin::_mySleep(int sleepMs)
 #endif
 }
 */
-Usuario GerenteLogin::NovoUsuario(string matricula) {
-	string nome;
-	cout << "Nome: ";
-	cin >> nome;
-	Usuario usuario(nome, matricula);
-	GerenteBD::InsereUsuario(usuario);
-	return usuario;
-}
 
 #ifdef DEBUG
 #undef DEBUG

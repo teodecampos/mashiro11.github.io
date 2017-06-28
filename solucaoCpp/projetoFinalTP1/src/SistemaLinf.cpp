@@ -20,7 +20,7 @@ void SistemaLinf::Run() {
 	}
 }
 
-void SistemaLinf::LimpaTela() {
+void SistemaLinf::_LimpaTela() {
 #ifdef _WIN32
 	system("cls");
 #elif __linux__
@@ -28,28 +28,39 @@ void SistemaLinf::LimpaTela() {
 #endif 
 }
 
-void SistemaLinf::_NavegaConta() {
-	LimpaTela();
+void SistemaLinf::_OpcaoInvalida() {
+	cout << "Opcao invalida!" << endl;
+	Sleep(3000);
+}
+
+void SistemaLinf::_Cabecalho() {
+	_LimpaTela();
 	cout << "/************************************************/" << endl;
 	cout << "	Bem vindo ao sistema, " << usuarioLogado.GetNome() << "." << endl;
 	cout << "/************************************************/" << endl;
+}
+
+void SistemaLinf::_NavegaConta() {
 	bool stay = true;
 	while (stay) {
+		_Cabecalho();
 		int opcao = _Opcoes();
 		switch (opcao) {
 		case 1:
-			DEBUG_PRINT("Opcao 1");
+			DEBUG_PRINT("Opcao " << opcao);
+			_ReservaLaboratorio();
 			break;
 		case 2:
-			DEBUG_PRINT("Opcao 2");
+			DEBUG_PRINT("Opcao " << opcao);
+			_EditaDadosPessoais();
 			break;
 		case 3:
-			DEBUG_PRINT("Opcao 3");
+			DEBUG_PRINT("Opcao " << opcao);
 			stay = false;
 			usuarioLogado = Usuario();
 			break;
 		default:
-			cout << "Opcao invalida!" << endl;
+			_OpcaoInvalida();
 		}
 	}
 }
@@ -63,12 +74,83 @@ int SistemaLinf::_Opcoes() {
 	cout << i++ << " - Logout" << endl;
 	cin >> opcao;
 	return opcao;
+}
+
+void SistemaLinf::_ReservaLaboratorio() {
+	bool stay = true;
+	while (stay) {
+		_Cabecalho();
+		cout << "	Reserva de Laboratorio" << endl;
+		cout << "/******************************/" << endl;
+		_VerificaReserva();//verifica se o usuario ja possui reserva e mostra na tela
+		int i = 1;
+		int opcao;
+		cout << "Escolha opcao desejada: " << endl;
+		cout << i++ << " - Reservar laboratorio" << endl;
+		cout << i++ << " - Cancelar reserva" << endl;
+		cout << i++ << " - Sair" << endl;
+		cin >> opcao;
+		switch (opcao) {
+		case 1:
+			DEBUG_PRINT("Opcao " << opcao);
+			_ReservarLab();
+			break;
+		case 2:
+			DEBUG_PRINT("Opcao " << opcao);
+			_CancelarReserva();
+			break;
+		case 3:
+			DEBUG_PRINT("Opcao " << opcao);
+			stay = false;
+			break;
+		default:
+			_OpcaoInvalida();
+		}
+	}
+}
+
+void SistemaLinf::_ReservarLab() {
+	cout << "Diga o horario e ta feito" << endl;
+}
+
+void SistemaLinf::_CancelarReserva() {
+	cout << "Diga o numero da reserva e ta feito" << endl;
 
 }
+void SistemaLinf::_VerificaReserva() {
+	cout << "Verifica se ja existem reservas" << endl;
+}
+
+void SistemaLinf::_EditaDadosPessoais() {
+	bool stay = true;
+	while (stay) {
+		_Cabecalho();
+		cout << "	Dados pessoais" << endl;
+		cout << "/******************************/" << endl;
+		cout << "Aqui a logica de saida: " << endl;
+		int opcao;
+		cin >> opcao;
+		switch (opcao) {
+		case 1:
+			DEBUG_PRINT("Opcao " << opcao);
+			break;
+		case 2:
+			DEBUG_PRINT("Opcao " << opcao);
+			break;
+		case 3:
+			DEBUG_PRINT("Opcao " << opcao);
+			stay = false;
+			break;
+		default:
+			_OpcaoInvalida();
+		}
+	}
+}
+
 void SistemaLinf::_EfetuaLogin() {
 	string matricula;
 	DEBUG_PRINT("Rodando Sistema");
-	LimpaTela();
+	_LimpaTela();
 	cout << "/******************************/" << endl;
 	cout << "	Tela de Login" << endl;
 	cout << "/******************************/" << endl;

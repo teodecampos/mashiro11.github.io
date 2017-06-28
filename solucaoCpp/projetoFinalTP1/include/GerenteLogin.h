@@ -60,27 +60,35 @@ public:
 	*
 	*/
 	void Iniciar();
+
+	/*!
+	*	\brief Gera a instância do usuário que navega no sistema.
+	*
+	*	O método credencia o usuário tentando de duas formas:
+	*	Primeiro, tenta identificar o usuário pela face, utilizando algorítmos de
+	*	visão computacional providos pela biblioteca OpenCV.
+	*	Caso o reconhecimento falhe, é pedido ao usuário que entre com uma senha.
+	*	Nesse caso, o sistema realimenta a base de dados com novas fotos e cria a sessão
+	*	daquele usuário.
+	*
+	*	\param matricula Matrícula do usuário que pretende fazer acesso.
+	*	\return Instância com informações do usuário
+	*/
 	Usuario Credencia(string matricula);
-	bool ReconheceFace(string matricula);
 	Usuario NovoUsuario(string matricula);
 	
 private:
-
 	/*!
 	*	\brief Faz a verificação de usuário via webcam.
 	*/
-	void _entradaCamera();
+	bool _ReconheceFace(string matricula);
 	
 	/*!
-	*	\brief Faz a verificação de usuário via teclado.
+	*	\brief Faz a captura de novas fotos do usuário via webcam.
 	*/
-	void _entradaTeclado();
+	void _AtualizaBancoDeFotos();
 
-	/*!
-	*	\brief Valida a operação de entrada.
-	*/
-	int _verificaEntrada();//
-
+	
 	void _mySleep(int);
 };
 

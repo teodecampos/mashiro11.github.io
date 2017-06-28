@@ -24,8 +24,15 @@ private:
 
 	void _EfetuaLogin();
 	int _Opcoes();
+	void _OpcaoInvalida();
 	void _NavegaConta();
-	void LimpaTela();
+	void _LimpaTela();
+	void _Cabecalho();
+	void _EditaDadosPessoais();
+	void _ReservaLaboratorio();
+	void _VerificaReserva();
+	void _ReservarLab();
+	void _CancelarReserva();
 public:
 	/*!
 	*	\brief Construtor padrão.
