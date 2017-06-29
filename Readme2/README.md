@@ -4,23 +4,23 @@ Este projeto consiste em um sistema de controle de acesso para ser utilizado na 
 
 <h2>Requisitos</h2>
 
-<h3>Compilador G++<h3>
+> Compilador G++
 
 Baixe o MinGW acessando <a href="https://sourceforge.net/projects/mingw-w64/">SourceForge</a>, clique depois em Download e espere o download finalizar, execute o aplicativo. Prossiga com Next e escolha a configuração adequada, como uma versão mais recente e a arquitetura compatível. Clique em Next até finalizar a instalação. Será mostrado uma tela inicial mostrando informações do Projeto. Prossiga até chegar em uma tela para escolher os recursos que serão instalados, selecione mingw32-base e o mingw32-gcc-g++. Depois disso, clique em Instalattion > Apply Changes.
 
 Agora será necessário adicionar o diretório de binários do MinGW na Path do Windows, para isso, clique no Iniciar, e depois clique com o botão direito em Computador, e em seguida em Propriedades. No lado esquerdo clique em Configurações avançadas do sistema. Clique agora em variáveis de ambiente. Ache a variável PATH, e clique em editar, no fim dela, adicione um “;” (ponto e vírgula), e coloque o diretório dos binários que foram instalados com o MinGW (geralmente em C:\Program Files (x86)\mingw-w64). Para testar se deu certo, abra o Prompt de Comando e digite “g++”.
 
-<h3>.NET Framework<h3>
+> .NET Framework
 
 Será utilizado nas próximas instalações o .NET Framework. Baixe acessando <a href="https://www.microsoft.com/net/download/framework">Microsoft</a>, escolha uma versão 4.3 ou superior e clique em Download. Execute e aceite os termos de contrato e em seguida clique em instalar, espere o download e a instalação finalizar.
 
-<h3>OpenCV<h3>
+> OpenCV
 
 Baixe o <a href="http://opencv.org/releases.html">OpenCV</a> versão 2.4.* de preferência ou acesse diretamente pela página do <a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.11/opencv-2.4.11.exe/download">SourceForge</a> que irá fazer o Download automaticamente. Depois abra e clique em extrair.
 
 Agora será necessário adicionar o diretório de binários do OpenCV na Path do Windows, para isso, clique no Iniciar, e depois clique com o botão direito em Computador, e em seguida em Propriedades. No lado esquerdo clique em Configurações avançadas do sistema. Clique agora em variáveis de ambiente. Em variáveis do sistema clique em Novo, defina o nome da variável como "OPENCV_DIR" sem aspas e o valor da variável como o diretório da build do OpenCV (ex. C:\opencv\build;). Ache a variável PATH, e clique em editar, no fim dela, adicione um “;” (ponto e vírgula), e coloque "%OPENCV_DIR%" ligado a continuação do diretório dos binários que foram instalados com o OpenCV (ex. %OPENCV_DIR%\x64\vc11\bin;).
 
-<h3>Visual Studio IDE<h3>
+> Visual Studio IDE
 
 Para quem gosta do auxílio que uma IDE proporciona, sugiro baixar o <a href="https://www.visualstudio.com/pt-br/vs/cplusplus/?rr=https%3A%2F%2Fwww.google.com.br%2F">VisualStudio</a>.
 
