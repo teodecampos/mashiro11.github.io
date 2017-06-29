@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['senha',['senha',['../classUsuario.html#a99d6b6876b9118121cb9171dde26cc44',1,'Usuario']]],
-  ['setmatricula',['SetMatricula',['../classUsuario.html#a120e068856b0e0a9e0db6e5a7e3c8555',1,'Usuario']]],
-  ['setnome',['SetNome',['../classUsuario.html#a392412fa31482a0a56fbca53d1f0bbb0',1,'Usuario']]],
-  ['setsenha',['SetSenha',['../classUsuario.html#a172eab6b5e1cdd16bcf87c1ffec86917',1,'Usuario']]],
-  ['sistemalinf',['SistemaLinf',['../classSistemaLinf.html',1,'SistemaLinf'],['../classSistemaLinf.html#a30dbef8aba4fa4e4753d7838c0c61bd3',1,'SistemaLinf::SistemaLinf()']]],
-  ['sistemalinf_2ecpp',['SistemaLinf.cpp',['../SistemaLinf_8cpp.html',1,'']]],
-  ['sistemalinf_2eh',['SistemaLinf.h',['../SistemaLinf_8h.html',1,'']]]
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['removeusuario',['RemoveUsuario',['../classGerenteBD.html#a938eebbcf539e0900c4cfd77cfc91be5',1,'GerenteBD']]],
+  ['reserva',['Reserva',['../classReserva.html',1,'Reserva'],['../classReserva.html#a0738e74ff413ed13f9a141c5dae3d0bb',1,'Reserva::Reserva()']]],
+  ['reserva_2ecpp',['Reserva.cpp',['../Reserva_8cpp.html',1,'']]],
+  ['reserva_2eh',['Reserva.h',['../Reserva_8h.html',1,'']]],
+  ['run',['Run',['../classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed',1,'SistemaLinf']]]
 ];
