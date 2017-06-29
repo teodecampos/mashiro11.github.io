@@ -30,10 +30,6 @@ Fonte: https://github.com/opencv/opencv
 
 Modulos extra: https://github.com/opencv/opencv_contrib
 
-<h2>Introdução</h2>
-
-Este projeto consiste em um sistema de controle de acesso para ser utilizado na entrada dos Laboratórios de Informática (Linf). Sendo que no momento do cadastramento de usuário são passados suas informações e logo após o sistema capta algumas fotos do rosto dessa pessoa com diferentes expressões faciais para que seja feita a validação de acesso.
-
 <h2>Requisitos Windows</h2>
 
 > Compilador G++
@@ -145,6 +141,10 @@ Primeiro diagrama de classes
 
 <img src="imagens/diagrama_simplificado_de_classes.png" alt="diagrama simplificado de classes">
 
+<h2>Diagrama de Sequência</h2>
+
+<img src="imagens/diagram.png" alt="diagrama sequencia">
+
 <h2>Screenshots</h2>
 
 <img src="imagens/ss.png" alt="ss">
@@ -152,6 +152,3 @@ Primeiro diagrama de classes
 <img src="imagens/ss3.png" alt="ss3">
 <img src="imagens/ss4.png" alt="ss4">
 
-<h2>Diagrama de Sequência</h2>
-
-<img src="imagens/diagram.png" alt="diagrama sequencia">
