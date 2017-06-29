@@ -44,7 +44,6 @@ GerenteBD::GerenteBD()
 	while (true) {
 		stringstream aux;
 		Reserva reserva;
-		vector<Reserva> vR;
 		getline(reservas, registro);
 		if (registro == "") break;
 		DEBUG_PRINT("Registro: " << registro);
@@ -54,8 +53,19 @@ GerenteBD::GerenteBD()
 		aux >> reserva.laboratorio;
 		aux >> reserva.data;
 		aux >> reserva.hora;
-		vR.push_back(reserva);
-		dadosReservas[reserva.data] = vR;
+		if ( stoi(reserva.numeroReserva) >= codigoReserva) {
+			codigoReserva = stoi(reserva.numeroReserva) + 1;
+		}
+		if (dadosReservas.find(reserva.data) == dadosReservas.end()) {
+			vector<Reserva> vR;
+			vR.push_back(reserva);
+			dadosReservas[reserva.data] = vR;
+
+		}
+		else {
+			dadosReservas[reserva.data].push_back(reserva);
+		}
+		
 	}
 	DEBUG_PRINT("GerenteDB::() - fim");
 }
@@ -74,12 +84,6 @@ GerenteBD::~GerenteBD()
 
 void GerenteBD::InsereUsuario(Usuario &usuario) {
 	DEBUG_PRINT("GerenteBD::InsereUsuario() - inicio");
-	/*
-	ofstream bdFile;
-	bdFile.open(dbName+".txt", std::ofstream::app);
-	bdFile << usuario.GetMatricula() << " " << usuario.GetNome() << endl;
-	bdFile.close();
-	*/
 	string aux;
 	aux = usuario.GetMatricula() + " " + usuario.GetNome() + " " + usuario.GetSenha() + "\n";
 	map<string, string>::iterator it = dadosUsuarios.find(usuario.GetMatricula());
@@ -90,6 +94,7 @@ void GerenteBD::InsereUsuario(Usuario &usuario) {
 		//essa linha vai sair daqui.
 		cout << "Usuario ja existe" << endl;
 	}
+	CommitUsuario();
 
 	DEBUG_PRINT("GerenteBD::InsereUsuario() - fim");
 }
@@ -148,6 +153,16 @@ void GerenteBD::RemoveUsuario() {
 	DEBUG_PRINT("GerenteBD::RemoveUsuario() - fim");
 }
 
+void GerenteBD::CommitUsuario() {
+	ofstream bdFile;
+	bdFile.open(dbName + ".txt", std::ofstream::out);
+	for (map<string, string>::iterator it = dadosUsuarios.begin(); it != dadosUsuarios.end(); it++) {
+			bdFile << it->second << endl;
+	}
+	bdFile.close();
+}
+
+
 void GerenteBD::InsereReserva(string matricula, Reserva reserva) {
 	stringstream aux;
 	aux << codigoReserva++;
@@ -184,12 +199,19 @@ vector<Reserva> GerenteBD::BuscaReserva(string entrada, string campo) {
 }
 
 void GerenteBD::CancelaReserva(string numReserva) {
-	/*
-	map<int, string>::iterator it = dadosReservas.find(num);
-	if (it != dadosReservas.end()) {
-		dadosReservas.erase(it);
+	//map<string, Reserva>::iterator it = dadosReservas.find(numReserva);
+	bool terminou = false;
+	for (map<string, vector<Reserva>>::iterator it = dadosReservas.begin(); it != dadosReservas.end(); it++) {
+		for (int i = 0; i < it->second.size(); i++) {
+			if (it->second[i].numeroReserva == numReserva) {
+				it->second.erase(it->second.begin() + i);
+				terminou = true;
+				break;
+			}
+		}
+		if (terminou) break;
 	}
-	*/
+
 }
 
 void GerenteBD::CommitReserva() {

@@ -82,6 +82,11 @@ public:
 	*/
 	static bool ChecaUsuario(string matricula, string senha);
 
+	/*!
+	*	\brief Executa as modificações sobre usuário na base de dados.
+	*/
+	static void CommitUsuario();
+
 	//CRUD Reserva
 	/*!
 	*	\brief Salva um novo registro de reserva.

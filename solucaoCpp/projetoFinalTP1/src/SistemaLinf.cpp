@@ -98,7 +98,7 @@ void SistemaLinf::_ReservaLaboratorio() {
 		cout << "Escolha opcao desejada: " << endl;
 		cout << i++ << " - Reservar laboratorio" << endl;
 		cout << i++ << " - Cancelar reserva" << endl;
-		cout << i++ << " - Voltar" << endl;
+		cout << i++ << " - Concluir e Voltar" << endl;
 		cin >> opcao;
 		switch (opcao) {
 		case 1:
@@ -169,8 +169,10 @@ void SistemaLinf::_ImprimeReservas(vector<Reserva> reservas) {
 }
 
 void SistemaLinf::_CancelarReserva() {
-	cout << "Diga o numero da reserva e ta feito" << endl;
-
+	string num;
+	cout << "Numero da reserva a cancelar: ";
+	cin >> num;
+	GerenteBD::CancelaReserva(num);
 }
 
 void SistemaLinf::_EditaDadosPessoais() {
