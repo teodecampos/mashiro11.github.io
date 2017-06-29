@@ -2,22 +2,22 @@
 #define __CaraCracha__
 
 #include <iostream>
-
+/// Classe apenas para teste
 class CaraCracha
 {
 public:
-	// metodo get
+	/// metodo get
 	int getMatricula();
-	// metodo get
+	/// metodo get
 	std::string getNome();
-	// metodo set
+	/// metodo set
 	void setMatricula();
-	// contrutor
+	/// contrutor
 	CaraCracha(std::string);
 protected:
-	// numero da matricula
+	/// numero da matricula
 	int matricula;
-	// nome do individio
+	/// nome do individio
 	std::string nome;
 	};
 
