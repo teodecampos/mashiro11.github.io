@@ -76,7 +76,7 @@ Linha de comando utilizada:
 Esse diagrama foi feito pensando nos principais atores presentes no laboratório.
 É também uma ideia inicial de modelagem do banco de dados.
 
-![Diagrama casos de uso](diagrama_casos_de_uso.png)
+<img src="imagens/diagrama_casos_de_uso.png" alt="Diagrama de casos de uso">
 
 Fonte:
 
@@ -98,7 +98,7 @@ https://yuml.me/diagram/scruffy/usecase/samples
 
 Descreve o parte do sistema de reconhecimento de faces para permitir a entrada ou cadastrar uma pessoa no linf.
 
-![Diagrama atividade](diagrama_atividade.png)
+<img src="imagens/diagrama_atividade.png" alt="Diagrama de atividade">
 
 Fonte:
 
@@ -113,7 +113,7 @@ https://yuml.me/diagram/nofunky/activity/samples
 
 Primeiro diagrama de sequência 
 
-![Diagrama de sequencia](diagrama_sequencia.png)
+<img src="imagens/diagrama_sequencia.png" alt="Diagrama de sequencia">
 
 Fonte:
 
@@ -143,15 +143,15 @@ SYSTEM->User: Validar User
 
 Primeiro diagrama de classes
 
-![Diagrama de classes](Diagrama simplificado de classes.png)
+<img src="imagens/diagrama_simplificado_de_classes.png" alt="diagrama simplificado de classes">
 
 <h2>Screenshots</h2>
 
-<img src="Readme2/ss.png" alt="ss">
-<img src="Readme2/ss2.png" alt="ss2">
-<img src="Readme2/ss3.png" alt="ss3">
-<img src="Readme2/ss4.png" alt="ss4">
+<img src="imagens/ss.png" alt="ss">
+<img src="imagens/ss2.png" alt="ss2">
+<img src="imagens/ss3.png" alt="ss3">
+<img src="imagens/ss4.png" alt="ss4">
 
 <h2>Diagrama de Sequência</h2>
 
-<img src="Readme2/diagram.png" alt="diagram">
+<img src="imagens/diagram.png" alt="diagrama sequencia">
