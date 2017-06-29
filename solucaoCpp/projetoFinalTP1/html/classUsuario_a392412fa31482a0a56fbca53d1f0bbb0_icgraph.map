@@ -1,0 +1,8 @@
+<map id="Usuario::SetNome" name="Usuario::SetNome">
+<area shape="rect" id="node2" href="$classGerenteBD.html#aee848e57a172b20998ada945c2d8f66a" title="Busca um usuário no banco de dados. " alt="" coords="181,5,356,32"/>
+<area shape="rect" id="node7" href="$classGerenteLogin.html#a94bdb9e213ffdc0aa3219dad300801cb" title="Gera uma instância de usuário. " alt="" coords="404,56,583,83"/>
+<area shape="rect" id="node3" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instância do usuário que navega no sistema. " alt="" coords="411,5,576,32"/>
+<area shape="rect" id="node4" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuário. " alt="" coords="631,31,804,57"/>
+<area shape="rect" id="node5" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="852,31,973,57"/>
+<area shape="rect" id="node6" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1021,31,1072,57"/>
+</map>

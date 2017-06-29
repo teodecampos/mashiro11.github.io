@@ -1,0 +1,5 @@
+<map id="GerenteBD::BuscaUsuario" name="GerenteBD::BuscaUsuario">
+<area shape="rect" id="node2" href="$classUsuario.html#a120e068856b0e0a9e0db6e5a7e3c8555" title="Setter do atributo matricula. " alt="" coords="228,5,375,32"/>
+<area shape="rect" id="node3" href="$classUsuario.html#a392412fa31482a0a56fbca53d1f0bbb0" title="Setter do atributo nome. " alt="" coords="237,56,365,83"/>
+<area shape="rect" id="node4" href="$classUsuario.html#a172eab6b5e1cdd16bcf87c1ffec86917" title="Setter do atributo senha. " alt="" coords="236,107,367,133"/>
+</map>

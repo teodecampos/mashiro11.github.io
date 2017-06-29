@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['senha',['senha',['../classUsuario.html#a99d6b6876b9118121cb9171dde26cc44',1,'Usuario']]],
+  ['set_5fauthorizer',['set_authorizer',['../structsqlite3__api__routines.html#a6d9843596d2d01e52eec89ab50ca6f27',1,'sqlite3_api_routines']]],
+  ['set_5fauxdata',['set_auxdata',['../structsqlite3__api__routines.html#a9e2419b4ef954a24408d3c12fe2b1dd7',1,'sqlite3_api_routines']]],
+  ['set_5flast_5finsert_5frowid',['set_last_insert_rowid',['../structsqlite3__api__routines.html#a91032b40e6e5987b091bcc5658fea445',1,'sqlite3_api_routines']]],
+  ['sleep',['sleep',['../structsqlite3__api__routines.html#a87cb2a664bb94f1a96fd4c3bf02a5e25',1,'sqlite3_api_routines']]],
+  ['snprintf',['snprintf',['../structsqlite3__api__routines.html#ad038a8026d6c9026284fe6a15fef7a72',1,'sqlite3_api_routines']]],
+  ['soft_5fheap_5flimit',['soft_heap_limit',['../structsqlite3__api__routines.html#a720a37e18110008f32c32b43e6df7bd6',1,'sqlite3_api_routines']]],
+  ['soft_5fheap_5flimit64',['soft_heap_limit64',['../structsqlite3__api__routines.html#ab3c891f0430b0a79449e16553fe2f7eb',1,'sqlite3_api_routines']]],
+  ['sourceid',['sourceid',['../structsqlite3__api__routines.html#ad1314899ed69b8d423c6418b51e9c0ba',1,'sqlite3_api_routines']]],
+  ['sql',['sql',['../structsqlite3__api__routines.html#a0d4c8662baae0bd626f0ee334183e69e',1,'sqlite3_api_routines']]],
+  ['sqlite3_5fdata_5fdirectory',['sqlite3_data_directory',['../sqlite3_8h.html#af29d40d81e4bf9db822f4064f566a8e0',1,'sqlite3.h']]],
+  ['sqlite3_5ftemp_5fdirectory',['sqlite3_temp_directory',['../sqlite3_8h.html#afd8d1c91c331c15618fa628d57e78042',1,'sqlite3.h']]],
+  ['sqlite3_5fversion',['sqlite3_version',['../sqlite3_8h.html#a306f7b16a705d89fffc05853bba81aeb',1,'sqlite3.h']]],
+  ['status',['status',['../structsqlite3__api__routines.html#a8fe0dcf3d691ef190272907e6fc9a8ae',1,'sqlite3_api_routines']]],
+  ['status64',['status64',['../structsqlite3__api__routines.html#a9c7fc0670fc12345b03148a9b7cd22e0',1,'sqlite3_api_routines']]],
+  ['step',['step',['../structsqlite3__api__routines.html#ad83c0c75185e68a850ec912cb886af0d',1,'sqlite3_api_routines']]],
+  ['stmt_5fbusy',['stmt_busy',['../structsqlite3__api__routines.html#a046c107f8b417c85acc32a4d964aa913',1,'sqlite3_api_routines']]],
+  ['stmt_5freadonly',['stmt_readonly',['../structsqlite3__api__routines.html#a04499bf64d666eb00fb19ae01cdbb8b1',1,'sqlite3_api_routines']]],
+  ['stmt_5fstatus',['stmt_status',['../structsqlite3__api__routines.html#aa9ab187c1c6a398aa67095978485dffe',1,'sqlite3_api_routines']]],
+  ['strglob',['strglob',['../structsqlite3__api__routines.html#ac45b5832c7bfe7e61cdaaea05aa88f00',1,'sqlite3_api_routines']]],
+  ['stricmp',['stricmp',['../structsqlite3__api__routines.html#aa6c2af28787384ae1f266ba2d7d97972',1,'sqlite3_api_routines']]],
+  ['strlike',['strlike',['../structsqlite3__api__routines.html#aeb83edd8809c64405e7a4546721a6d07',1,'sqlite3_api_routines']]],
+  ['strnicmp',['strnicmp',['../structsqlite3__api__routines.html#afae159e66af1ef44594688fc0c5776d6',1,'sqlite3_api_routines']]],
+  ['system_5ferrno',['system_errno',['../structsqlite3__api__routines.html#a47c5c8b23150912e014dd155cf8f4ddd',1,'sqlite3_api_routines']]],
+  ['szosfile',['szOsFile',['../structsqlite3__vfs.html#a549399081342d61134b6398562a0a997',1,'sqlite3_vfs']]]
+];

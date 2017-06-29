@@ -1,0 +1,15 @@
+<map id="SistemaLinf::_ReservaLaboratorio" name="SistemaLinf::_ReservaLaboratorio">
+<area shape="rect" id="node2" href="$classSistemaLinf.html#a8a6ab1c1b404f58739b2c99ef6ae95d2" title="Gera o cabeçalho principal do sistema. " alt="" coords="286,56,453,83"/>
+<area shape="rect" id="node5" href="$classSistemaLinf.html#aa826b0cb1de2201bbb8ee2e9fcae7d48" title="Imprime na tela resultado da consulta de reservas. " alt="" coords="519,107,723,133"/>
+<area shape="rect" id="node6" href="$classGerenteBD.html#ac4a3132cc8f79fd3472358378c1cfe0c" title="Busca registros de reserva de acordo com o campo utilizado como critério de busca. " alt="" coords="532,208,709,235"/>
+<area shape="rect" id="node8" href="$classUsuario.html#a51b15e0008a5fa1d0da0da509aa1701e" title="Getter do atributo matricula. " alt="" coords="547,259,695,285"/>
+<area shape="rect" id="node9" href="$classSistemaLinf.html#a0414bcc2e81953f87acbb3ca80aab9ab" title="Faz requisição para reserva de laboratório. " alt="" coords="281,157,457,184"/>
+<area shape="rect" id="node11" href="$classSistemaLinf.html#ac4312005ce0674d918f89b22836a92ee" title="Faz requisição para cancelamento de reserva. " alt="" coords="268,309,471,336"/>
+<area shape="rect" id="node13" href="$classGerenteBD.html#a4ddc8a64d951a32cc19327ce99bdc1a8" title="Executa as modificações sobre reserva na base de dados. " alt="" coords="277,360,462,387"/>
+<area shape="rect" id="node14" href="$classSistemaLinf.html#a4bcddb736d984cad7feb2d0b16f91d34" title="Mensagem padrão para entrada inválida. " alt="" coords="277,411,462,437"/>
+<area shape="rect" id="node3" href="$classSistemaLinf.html#ae02bf5d72ed634c919512e8c80f8ca28" title="Limpa os caracteres da tela. " alt="" coords="539,56,703,83"/>
+<area shape="rect" id="node4" href="$classUsuario.html#a39534698541ca25dca335aa79ef6e42f" title="Getter do atributo nome. " alt="" coords="556,5,685,32"/>
+<area shape="rect" id="node7" href="$classGerenteBD.html#ad0207347ebe1fc29ebfd11cec64e5211" title="Verifica se a data informada possui reservas. " alt="" coords="771,183,965,209"/>
+<area shape="rect" id="node10" href="$classGerenteBD.html#a34f72b9c2114723a55c4582a73ce0afa" title="Salva um novo registro de reserva. " alt="" coords="533,157,708,184"/>
+<area shape="rect" id="node12" href="$classGerenteBD.html#a617821afeeda144f2ab7632dd5357d47" title="Cancela uma reserva. " alt="" coords="527,309,714,336"/>
+</map>

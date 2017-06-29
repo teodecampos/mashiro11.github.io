@@ -1,0 +1,10 @@
+<map id="GerenteLogin::NovoUsuario" name="GerenteLogin::NovoUsuario">
+<area shape="rect" id="node2" href="$classUsuario.html#a120e068856b0e0a9e0db6e5a7e3c8555" title="Setter do atributo matricula. " alt="" coords="245,5,392,32"/>
+<area shape="rect" id="node3" href="$classUsuario.html#a392412fa31482a0a56fbca53d1f0bbb0" title="Setter do atributo nome. " alt="" coords="255,56,383,83"/>
+<area shape="rect" id="node4" href="$classUsuario.html#a172eab6b5e1cdd16bcf87c1ffec86917" title="Setter do atributo senha. " alt="" coords="253,107,384,133"/>
+<area shape="rect" id="node5" href="$classGerenteBD.html#a63f7f9bfe46b46806b21d5df2a8f34f0" title="Insere um novo usuário no banco de dados. " alt="" coords="232,157,405,184"/>
+<area shape="rect" id="node6" href="$classUsuario.html#a51b15e0008a5fa1d0da0da509aa1701e" title="Getter do atributo matricula. " alt="" coords="471,81,619,108"/>
+<area shape="rect" id="node7" href="$classUsuario.html#a39534698541ca25dca335aa79ef6e42f" title="Getter do atributo nome. " alt="" coords="480,132,609,159"/>
+<area shape="rect" id="node8" href="$classUsuario.html#a364e3001148916047ee9f74f46b89c67" title="Getter do atributo senha. " alt="" coords="479,183,611,209"/>
+<area shape="rect" id="node9" href="$classGerenteBD.html#a1d0efdc4bad2f2224eba2b2214477a7d" title="Executa as modificações sobre usuário na base de dados. " alt="" coords="453,233,636,260"/>
+</map>
