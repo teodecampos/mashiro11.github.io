@@ -14,8 +14,18 @@ using std::string;
 */
 class Usuario {
 private:
+	/*!
+	*	\brief Nome do usuário.
+	*/
 	string nome;
+
+	/*!
+	*	Matrícula do usuário.
+	*/
 	string matricula;
+	/*!
+	*	\brief Senha do usuário.
+	*/
 	string senha;
 
 public:

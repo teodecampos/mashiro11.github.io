@@ -183,7 +183,7 @@ vector<Reserva> GerenteBD::BuscaReserva(string entrada, string campo) {
 	}
 }
 
-void GerenteBD::CancelaReserva(int num) {
+void GerenteBD::CancelaReserva(string numReserva) {
 	/*
 	map<int, string>::iterator it = dadosReservas.find(num);
 	if (it != dadosReservas.end()) {

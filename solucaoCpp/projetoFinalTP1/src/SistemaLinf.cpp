@@ -9,8 +9,6 @@
 
 
 SistemaLinf::SistemaLinf() {
-
-
 }
 
 void SistemaLinf::Run() {

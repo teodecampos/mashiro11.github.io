@@ -75,6 +75,13 @@ public:
 	*	\return Instância com informações do usuário
 	*/
 	Usuario Credencia(string matricula);
+
+	/*!
+	*	\brief Gera uma instância de usuário.
+	*
+	*	\param matricula Matrícula do usuário.
+	*	\return Usuário.
+	*/
 	Usuario NovoUsuario(string matricula);
 	
 private:
