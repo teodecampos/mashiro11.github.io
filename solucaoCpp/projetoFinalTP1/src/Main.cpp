@@ -5,7 +5,13 @@
 */
 #define OPENCV_INSTALLED
 #ifdef OPENCV_INSTALLED
-#include <opencv2\opencv.hpp>
+#ifdef __linux__ 
+	#include "opencv2/opencv.hpp"
+#else
+	#include <opencv2\opencv.hpp>
+#endif
+
+
 
 using cv::VideoCapture;
 using cv::Mat;
