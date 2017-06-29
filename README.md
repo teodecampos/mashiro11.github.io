@@ -78,3 +78,9 @@ else Matrícula não encontrada
 end
 SYSTEM->User: Validar User
 ```
+
+##  Diagrama de Classes
+
+Primeiro diagrama de classes
+
+![Diagrama de classes](Diagrama simplificado de classes.png)
