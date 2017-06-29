@@ -8,8 +8,10 @@
 #endif
 
 string GerenteBD::dbName("");
+string GerenteBD::dbReserva("");
 map<string, string> GerenteBD::dadosUsuarios;
-
+map<string, vector<Reserva>> GerenteBD::dadosReservas;
+int GerenteBD::codigoReserva = 1;
 GerenteBD::GerenteBD()
 {
 	DEBUG_PRINT("GerenteDB::() - inicio");
@@ -35,21 +37,60 @@ GerenteBD::GerenteBD()
 		DEBUG_PRINT("	Chave: " << it->first);
 		DEBUG_PRINT("		Valor: " << it->second);
 	}
+	
+	dbReserva = "reservas";
+
+	ifstream reservas(dbReserva + ".txt");
+	while (true) {
+		stringstream aux;
+		Reserva reserva;
+		vector<Reserva> vR;
+		getline(reservas, registro);
+		if (registro == "") break;
+		DEBUG_PRINT("Registro: " << registro);
+		aux << registro;
+		aux >> reserva.numeroReserva;
+		aux >> reserva.matricula;
+		aux >> reserva.laboratorio;
+		aux >> reserva.data;
+		aux >> reserva.hora;
+		vR.push_back(reserva);
+		dadosReservas[reserva.data] = vR;
+	}
 	DEBUG_PRINT("GerenteDB::() - fim");
 }
 
 
 GerenteBD::~GerenteBD()
 {
-	//sqlite3_close(db);
+	//insere os dados da memoria no arquivo
+	ofstream bdFile;
+	bdFile.open(dbName + ".txt", std::ofstream::app);
+	for (map<string, string>::iterator it = dadosUsuarios.begin(); it != dadosUsuarios.end(); it++) {
+		bdFile << it->second << endl;
+	}
+	bdFile.close();
 }
 
 void GerenteBD::InsereUsuario(Usuario &usuario) {
 	DEBUG_PRINT("GerenteBD::InsereUsuario() - inicio");
+	/*
 	ofstream bdFile;
 	bdFile.open(dbName+".txt", std::ofstream::app);
 	bdFile << usuario.GetMatricula() << " " << usuario.GetNome() << endl;
 	bdFile.close();
+	*/
+	string aux;
+	aux = usuario.GetMatricula() + " " + usuario.GetNome() + " " + usuario.GetSenha() + "\n";
+	map<string, string>::iterator it = dadosUsuarios.find(usuario.GetMatricula());
+	if (it == dadosUsuarios.end()) {
+		dadosUsuarios[usuario.GetMatricula()] = aux;
+	}
+	else {
+		//essa linha vai sair daqui.
+		cout << "Usuario ja existe" << endl;
+	}
+
 	DEBUG_PRINT("GerenteBD::InsereUsuario() - fim");
 }
 
@@ -92,7 +133,7 @@ bool GerenteBD::ChecaUsuario(string matricula, string senha) {
 		//descarta matricula, nome
 		aux >> uSenha; aux >> uSenha; aux >> uSenha; //a senha é o terceiro elemento da linha
 		DEBUG_PRINT("GerenteBD::ChecaUsuario - fim");
-		if(uSenha == senha) return true;
+		if (uSenha == senha) return true;
 		else return false;
 	}
 	else {
@@ -105,6 +146,72 @@ void GerenteBD::RemoveUsuario() {
 	DEBUG_PRINT("GerenteBD::RemoveUsuario() - inicio");
 
 	DEBUG_PRINT("GerenteBD::RemoveUsuario() - fim");
+}
+
+void GerenteBD::InsereReserva(string matricula, Reserva reserva) {
+	stringstream aux;
+	aux << codigoReserva++;
+	aux >> reserva.numeroReserva;
+	if(DataComReserva(reserva.data)) dadosReservas[reserva.data].push_back(reserva);
+	else {
+		vector<Reserva> novoVector;
+		novoVector.push_back(reserva);
+		dadosReservas[reserva.data] = novoVector;
+	}
+}
+
+vector<Reserva> GerenteBD::BuscaReserva(string entrada, string campo) {
+
+	if (campo == "data") {
+		if (DataComReserva(entrada)) return dadosReservas[entrada];
+		return vector<Reserva>();
+	}
+	else if (campo == "matricula") {
+		vector<Reserva> reservas;
+		if (!dadosReservas.empty()) {
+			for (map<string, vector<Reserva>>::iterator itM = dadosReservas.begin(); itM != dadosReservas.end(); itM++) {
+				if (!itM->second.empty()) {
+					for (vector<Reserva>::iterator itV = itM->second.begin(); itV != itM->second.end(); itV++) {
+						if (itV->matricula == entrada)
+							reservas.push_back(*itV);
+					}
+				}
+
+			}
+		}
+		return reservas;
+	}
+}
+
+void GerenteBD::CancelaReserva(int num) {
+	/*
+	map<int, string>::iterator it = dadosReservas.find(num);
+	if (it != dadosReservas.end()) {
+		dadosReservas.erase(it);
+	}
+	*/
+}
+
+void GerenteBD::CommitReserva() {
+	ofstream bdFile;
+	bdFile.open(dbReserva + ".txt", std::ofstream::out);
+	for (map<string, vector<Reserva>>::iterator it = dadosReservas.begin(); it != dadosReservas.end(); it++) {
+		for (int i = 0; i < it->second.size(); i++) {
+			Reserva reserva = it->second[i];
+			bdFile << reserva.numeroReserva << " "
+				<< reserva.matricula << " "
+				<< reserva.laboratorio << " "
+				<< reserva.data << " "
+				<< reserva.hora << endl;
+		}
+	}
+	bdFile.close();
+}
+
+bool GerenteBD::DataComReserva(string data) {
+	map<string, vector<Reserva>>::iterator it = dadosReservas.find(data);
+	if (it != dadosReservas.end()) return true;
+	else return false;
 }
 
 #ifdef DEBUG

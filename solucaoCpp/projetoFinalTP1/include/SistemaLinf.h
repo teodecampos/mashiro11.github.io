@@ -6,7 +6,8 @@
 
 #include "GerenteLogin.h"
 #include "GerenteBD.h"
-
+#include "Usuario.h"
+#include "Reserva.h"
 
 using std::cout;
 using std::endl;
@@ -23,7 +24,6 @@ private:
 	Usuario usuarioLogado;
 
 	void _EfetuaLogin();
-	int _Opcoes();
 	void _OpcaoInvalida();
 	void _NavegaConta();
 	void _LimpaTela();
@@ -33,6 +33,7 @@ private:
 	void _VerificaReserva();
 	void _ReservarLab();
 	void _CancelarReserva();
+	void _ImprimeReservas(vector<Reserva> reservas);
 public:
 	/*!
 	*	\brief Construtor padrão.
@@ -46,4 +47,4 @@ public:
 };
 
 
-#endif // !SistemaLinf
+#endif // SistemaLinf

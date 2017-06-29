@@ -6,7 +6,9 @@
 #include <string>
 #include <sstream>
 #include <map>
+#include <vector>
 #include "Usuario.h"
+#include "Reserva.h"
 
 /*!
 *	\brief \c GerenteBD controla requisições ao banco de dados
@@ -22,7 +24,7 @@ using std::ifstream;
 using std::getline;
 using std::stringstream;
 using std::map;
-
+using std::vector;
 
 class GerenteBD
 {
@@ -69,9 +71,24 @@ public:
 	*	\return Sretorna true apenas se a matricula existe e está associada à senha.
 	*/
 	static bool ChecaUsuario(string matricula, string senha);
+
+	static void InsereReserva(string matricula, Reserva reserva);
+
+	static vector<Reserva> BuscaReserva(string entrada, string campo);
+
+	static void CancelaReserva(int num);
+
+	static void CommitReserva();
+
+	static bool DataComReserva(string data);
+
+
 private:
+	static int codigoReserva;
 	static string dbName;
+	static string dbReserva;
 	static map<string, string> dadosUsuarios;
+	static map<string, vector<Reserva>> dadosReservas;
 };
 
 #endif
