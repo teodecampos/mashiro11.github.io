@@ -66,6 +66,9 @@ Linha de comando utilizada:
 
 <pre>cmake .</pre>
 
+## Documentação
+A documentação foi gerada utilizando a ferramenta Doxygen, podendo ser acessada pelo link:
+https://mashiro11.github.io/solucaoCpp/projetoFinalTP1/html/
 
 ## Diagrama Casos de uso
 
