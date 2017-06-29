@@ -40,9 +40,9 @@ Linha de comando utilizada:
 
 <h2>Screenshots</h2>
 
-<img src="ss.png" alt="ss">
-<img src="ss2.png" alt="ss2">
-<img src="ss3.png" alt="ss3">
+<img src="ss.PNG" alt="ss">
+<img src="ss2.PNG" alt="ss2">
+<img src="ss3.PNG" alt="ss3">
 <img src="ss4.png" alt="ss4">
 
 <h2>Diagrama de Sequência</h2>
