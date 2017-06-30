@@ -31,3 +31,7 @@ diferença entre !brief e ///
 !brief para funçao
 /// variavel 
 
+6 - Atual
+
+Fazer função simples para detectar face
+
