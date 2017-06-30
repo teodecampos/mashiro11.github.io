@@ -32,7 +32,7 @@ using std::vector;
 using namespace cv;
 
 /*!
-*	\brief \c GerenteLogin é aquela que credencia o usuário.
+*	\brief Credencia o usuário.
 *
 *	A primeira classe com quem o usuário irá lidar no sistema é o GerenteLogin.
 *	Essa será responsável por validar a entrada do usuário no sistema. A primeira

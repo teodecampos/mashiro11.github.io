@@ -64,7 +64,53 @@ Usuario GerenteLogin::Credencia(string matricula) {
 }
 
 bool GerenteLogin::_ReconheceFace(string matricula) {
+	
+	CascadeClassifier face_cascade;
+	string path("C:\\opencv\\build\\etc\\haarcascades\\");
+	face_cascade.load(path+"haarcascade_frontalface_alt.xml");
 
+	VideoCapture captureDevice;
+	captureDevice.open(0);
+
+	Mat captureFrame;
+	Mat grayscaleFrame;
+
+	namedWindow("Sistema Linf - UnB",1);
+
+	while (true) {
+		captureDevice >> captureFrame;
+
+		cvtColor(captureFrame, grayscaleFrame, CV_BGR2GRAY);
+		equalizeHist(grayscaleFrame, grayscaleFrame);
+
+		vector<Rect> faces;
+
+		face_cascade.detectMultiScale(grayscaleFrame, faces, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_SCALE_IMAGE, Size(30, 30));
+
+		for (int i = 0; i < faces.size(); i++) {
+			Point pt1(faces[i].x + faces[i].width, faces[i].y + faces[i].height);
+			Point pt2(faces[i].x, faces[i].y);
+
+			rectangle(captureFrame, pt1, pt2, cvScalar(0, 255, 0, 0), 1, 8, 0);
+		}
+		imshow("sistema Linf - UnB", captureFrame);
+		waitKey(30);
+	}
+	/*VideoCapture capturaTeste(0);
+	if (!capturaTeste.isOpened()) {
+		cout << "Nao pode abrir a camera" << endl;
+	}
+	char pressed = -1;
+	while (true) {
+		Mat camFrame;
+		capturaTeste.read(camFrame);
+		imshow("Camera output", camFrame);
+		pressed = waitKey(30);
+		if (pressed >= 0) {
+			cout << pressed << endl;
+			break;
+		}
+	}*/
 	if (false) {//caso reconheça pelo rosto
 		cout << "Usuario reconhecido" << endl;
 		return true;

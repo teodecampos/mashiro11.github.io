@@ -15,7 +15,7 @@ int GerenteBD::codigoReserva = 1;
 GerenteBD::GerenteBD()
 {
 	DEBUG_PRINT("GerenteDB::() - inicio");
-	dbName = "myDB";
+	dbName = "resources/myDB";
 	string registro;
 	string matricula;
 	string nome;
@@ -38,7 +38,7 @@ GerenteBD::GerenteBD()
 		DEBUG_PRINT("		Valor: " << it->second);
 	}
 	
-	dbReserva = "reservas";
+	dbReserva = "resources/reservas";
 
 	ifstream reservas(dbReserva + ".txt");
 	while (true) {

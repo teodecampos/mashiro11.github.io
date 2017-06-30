@@ -10,12 +10,6 @@
 #include "Usuario.h"
 #include "Reserva.h"
 
-/*!
-*	\brief \c GerenteBD controla requisições ao banco de dados
-*	
-*	GerenteBD é responsável por promover a interface entre a camada de negócio
-*	e a camada de persistência de dados.
-*/
 using std::cout;
 using std::endl;
 using std::string;
@@ -26,6 +20,12 @@ using std::stringstream;
 using std::map;
 using std::vector;
 
+/*!
+*	\brief Controla requisições ao banco de dados
+*
+*	GerenteBD é responsável por promover a interface entre a camada de negócio
+*	e a camada de persistência de dados.
+*/
 class GerenteBD
 {
 public:

@@ -13,7 +13,7 @@ using std::endl;
 using std::stoi;
 
 /*!
-*	\brief Classe \c Reserva abstrai o conceito da reserva de uma sala no laboratório.
+*	\brief Abstrai o conceito da reserva de uma sala no laboratório.
 */
 class Reserva {
 public:
