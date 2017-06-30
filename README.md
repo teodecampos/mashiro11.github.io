@@ -150,8 +150,8 @@ Primeiro diagrama de classes
 
 <h2>Screenshots</h2>
 
-<img src="imagens/ss.png" alt="ss">
-<img src="imagens/ss2.png" alt="ss2">
-<img src="imagens/ss3.png" alt="ss3">
+<img src="imagens/ss.PNG" alt="ss">
+<img src="imagens/ss2.PNG" alt="ss2">
+<img src="imagens/ss3.PNG" alt="ss3">
 <img src="imagens/ss4.png" alt="ss4">
 
