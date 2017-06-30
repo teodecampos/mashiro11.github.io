@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho 2 - TP1: Código-Fonte de outros_organizar/lib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho 2 - TP1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c3635ed722a5e6e6de0e6000af2b4415.html">outros_organizar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    Classe para armazenar informaÃ§Ãµes dos usuÃ¡rios</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classLista.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="keyword">public</span>:</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classLista.html#a25f15adb87ec1e9e043904e6a5d1205e">    6</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classLista.html#a25f15adb87ec1e9e043904e6a5d1205e">numero</a>;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classLista.html#a4bd80ede481b135276a9c4f2c86c82e8">    7</a></span>&#160;                <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classLista.html#a4bd80ede481b135276a9c4f2c86c82e8">nome</a>;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classLista.html#a996b22320b20360a7a77c8e39c1f0c7f">    8</a></span>&#160;                <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classLista.html#a996b22320b20360a7a77c8e39c1f0c7f">sobrenome</a>;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classLista.html#a6f6922feb3c77470c0acd3fa897d2ab2">    9</a></span>&#160;                <span class="keywordtype">char</span> *<a class="code" href="classLista.html#a6f6922feb3c77470c0acd3fa897d2ab2">disciplina</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classLista.html#ae0fae639a304dc0ded410c1042591b26">exibe</a>();</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Cria objeto usuÃ¡rio e cadastra no banco de dados</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#af98383973aa4cb7fe97f0a504f43a958">criaObj</a>(<span class="keywordtype">signed</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="classLista.html#a25f15adb87ec1e9e043904e6a5d1205e">numero</a>, std::string <a class="code" href="classLista.html#a4bd80ede481b135276a9c4f2c86c82e8">nome</a>, std::string <a class="code" href="classLista.html#a996b22320b20360a7a77c8e39c1f0c7f">sobrenome</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    Retorna 1 caso o arquivo exista</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="lib_8h.html#a29dcd759191e9d7a4b70ea80ff35e86e">existencia</a>(<span class="keywordtype">signed</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="classLista.html#a25f15adb87ec1e9e043904e6a5d1205e">numero</a>);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    Colhe as informaÃ§Ãµes para inserÃ§Ã£o no banco de dados</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a64bda968beae5f72bab92514bec5353d">insere</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    MÃ©todo criado para editar qualquer informaÃ§Ã£o do usuÃ¡rio,</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    inclusive adicionar vÃ¡rias disciplinas</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a5a077bba50dcb58447b86902b736c067">edita</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    Busca no banco de dados informaÃ§Ãµes sobre o usuÃ¡rio especificado</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a81e9e0fafea0a07acc4e5cd6f0c810aa">busca</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    Exclui o arquivo especificado</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a4632dbc1faed1e10d258a0caecde9500">deleta</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    Lista o diretÃ³rio corrente</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a>();</div><div class="ttc" id="classLista_html_ae0fae639a304dc0ded410c1042591b26"><div class="ttname"><a href="classLista.html#ae0fae639a304dc0ded410c1042591b26">Lista::exibe</a></div><div class="ttdeci">void exibe()</div></div>
+<div class="ttc" id="lib_8h_html_ab7996a945dad329e55ad689d6c2616cf"><div class="ttname"><a href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a></div><div class="ttdeci">void dir()</div><div class="ttdef"><b>Definition:</b> functions.cpp:398</div></div>
+<div class="ttc" id="lib_8h_html_a29dcd759191e9d7a4b70ea80ff35e86e"><div class="ttname"><a href="lib_8h.html#a29dcd759191e9d7a4b70ea80ff35e86e">existencia</a></div><div class="ttdeci">int existencia(signed long long int numero)</div><div class="ttdef"><b>Definition:</b> functions.cpp:66</div></div>
+<div class="ttc" id="lib_8h_html_a81e9e0fafea0a07acc4e5cd6f0c810aa"><div class="ttname"><a href="lib_8h.html#a81e9e0fafea0a07acc4e5cd6f0c810aa">busca</a></div><div class="ttdeci">void busca()</div><div class="ttdef"><b>Definition:</b> functions.cpp:316</div></div>
+<div class="ttc" id="classLista_html_a25f15adb87ec1e9e043904e6a5d1205e"><div class="ttname"><a href="classLista.html#a25f15adb87ec1e9e043904e6a5d1205e">Lista::numero</a></div><div class="ttdeci">int numero</div><div class="ttdef"><b>Definition:</b> lib.h:6</div></div>
+<div class="ttc" id="classLista_html_a4bd80ede481b135276a9c4f2c86c82e8"><div class="ttname"><a href="classLista.html#a4bd80ede481b135276a9c4f2c86c82e8">Lista::nome</a></div><div class="ttdeci">const char * nome</div><div class="ttdef"><b>Definition:</b> lib.h:7</div></div>
+<div class="ttc" id="classLista_html_a6f6922feb3c77470c0acd3fa897d2ab2"><div class="ttname"><a href="classLista.html#a6f6922feb3c77470c0acd3fa897d2ab2">Lista::disciplina</a></div><div class="ttdeci">char * disciplina</div><div class="ttdef"><b>Definition:</b> lib.h:9</div></div>
+<div class="ttc" id="lib_8h_html_a5a077bba50dcb58447b86902b736c067"><div class="ttname"><a href="lib_8h.html#a5a077bba50dcb58447b86902b736c067">edita</a></div><div class="ttdeci">void edita()</div><div class="ttdef"><b>Definition:</b> functions.cpp:109</div></div>
+<div class="ttc" id="classLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdef"><b>Definition:</b> lib.h:4</div></div>
+<div class="ttc" id="lib_8h_html_af98383973aa4cb7fe97f0a504f43a958"><div class="ttname"><a href="lib_8h.html#af98383973aa4cb7fe97f0a504f43a958">criaObj</a></div><div class="ttdeci">void criaObj(signed long long int numero, std::string nome, std::string sobrenome)</div></div>
+<div class="ttc" id="lib_8h_html_a64bda968beae5f72bab92514bec5353d"><div class="ttname"><a href="lib_8h.html#a64bda968beae5f72bab92514bec5353d">insere</a></div><div class="ttdeci">void insere()</div><div class="ttdef"><b>Definition:</b> functions.cpp:82</div></div>
+<div class="ttc" id="lib_8h_html_a4632dbc1faed1e10d258a0caecde9500"><div class="ttname"><a href="lib_8h.html#a4632dbc1faed1e10d258a0caecde9500">deleta</a></div><div class="ttdeci">void deleta()</div><div class="ttdef"><b>Definition:</b> functions.cpp:372</div></div>
+<div class="ttc" id="classLista_html_a996b22320b20360a7a77c8e39c1f0c7f"><div class="ttname"><a href="classLista.html#a996b22320b20360a7a77c8e39c1f0c7f">Lista::sobrenome</a></div><div class="ttdeci">const char * sobrenome</div><div class="ttdef"><b>Definition:</b> lib.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

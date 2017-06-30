@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usuario',['Usuario',['../classUsuario.html',1,'']]]
+  ['sistemalinf',['SistemaLinf',['../classSistemaLinf.html',1,'']]]
 ];
