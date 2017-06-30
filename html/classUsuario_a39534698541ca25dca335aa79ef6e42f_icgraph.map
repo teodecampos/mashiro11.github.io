@@ -1,12 +1,12 @@
 <map id="Usuario::GetNome" name="Usuario::GetNome">
-<area shape="rect" id="node2" href="$classGerenteBD.html#a63f7f9bfe46b46806b21d5df2a8f34f0" title="Insere um novo usuÃ¡rio no banco de dados. " alt="" coords="183,5,356,32"/>
-<area shape="rect" id="node7" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instÃ¢ncia do usuÃ¡rio que navega no sistema. " alt="" coords="187,56,352,83"/>
-<area shape="rect" id="node8" href="$classSistemaLinf.html#a8a6ab1c1b404f58739b2c99ef6ae95d2" title="Gera o cabeÃ§alho principal do sistema. " alt="" coords="186,132,353,159"/>
-<area shape="rect" id="node3" href="$classGerenteLogin.html#a94bdb9e213ffdc0aa3219dad300801cb" title="Gera uma instÃ¢ncia de usuÃ¡rio. " alt="" coords="422,5,601,32"/>
-<area shape="rect" id="node4" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuÃ¡rio. " alt="" coords="671,56,844,83"/>
-<area shape="rect" id="node5" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execuÃ§Ã£o dos sistema. " alt="" coords="896,81,1017,108"/>
+<area shape="rect" id="node2" href="$classGerenteBD.html#a63f7f9bfe46b46806b21d5df2a8f34f0" title="Insere um novo usuário no banco de dados. " alt="" coords="183,5,356,32"/>
+<area shape="rect" id="node7" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instância do usuário que navega no sistema. " alt="" coords="187,56,352,83"/>
+<area shape="rect" id="node8" href="$classSistemaLinf.html#a8a6ab1c1b404f58739b2c99ef6ae95d2" title="Gera o cabeçalho principal do sistema. " alt="" coords="186,132,353,159"/>
+<area shape="rect" id="node3" href="$classGerenteLogin.html#a94bdb9e213ffdc0aa3219dad300801cb" title="Gera uma instância de usuário. " alt="" coords="422,5,601,32"/>
+<area shape="rect" id="node4" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuário. " alt="" coords="671,56,844,83"/>
+<area shape="rect" id="node5" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="896,81,1017,108"/>
 <area shape="rect" id="node6" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1065,81,1116,108"/>
-<area shape="rect" id="node9" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operaÃ§Ãµes possiveis no sistema. " alt="" coords="667,132,848,159"/>
-<area shape="rect" id="node10" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a Ã¡rea de reserva de salas do laboratÃ³rio. " alt="" coords="404,157,619,184"/>
-<area shape="rect" id="node11" href="$classSistemaLinf.html#a17d5c1f1114a1ed28e17775c134351eb" title="Acessa Ã¡rea de modificaÃ§Ã£o de dados pessoais. " alt="" coords="425,209,597,250"/>
+<area shape="rect" id="node9" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operações possiveis no sistema. " alt="" coords="667,132,848,159"/>
+<area shape="rect" id="node10" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a área de reserva de salas do laboratório. " alt="" coords="404,157,619,184"/>
+<area shape="rect" id="node11" href="$classSistemaLinf.html#a17d5c1f1114a1ed28e17775c134351eb" title="Acessa área de modificação de dados pessoais. " alt="" coords="425,209,597,250"/>
 </map>

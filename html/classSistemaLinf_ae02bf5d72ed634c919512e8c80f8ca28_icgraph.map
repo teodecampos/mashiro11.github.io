@@ -1,9 +1,9 @@
 <map id="SistemaLinf::_LimpaTela" name="SistemaLinf::_LimpaTela">
-<area shape="rect" id="node2" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuÃ¡rio. " alt="" coords="699,5,872,32"/>
-<area shape="rect" id="node5" href="$classSistemaLinf.html#a8a6ab1c1b404f58739b2c99ef6ae95d2" title="Gera o cabeÃ§alho principal do sistema. " alt="" coords="217,68,384,95"/>
-<area shape="rect" id="node3" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execuÃ§Ã£o dos sistema. " alt="" coords="924,44,1045,71"/>
+<area shape="rect" id="node2" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuário. " alt="" coords="699,5,872,32"/>
+<area shape="rect" id="node5" href="$classSistemaLinf.html#a8a6ab1c1b404f58739b2c99ef6ae95d2" title="Gera o cabeçalho principal do sistema. " alt="" coords="217,68,384,95"/>
+<area shape="rect" id="node3" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="924,44,1045,71"/>
 <area shape="rect" id="node4" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1093,44,1144,71"/>
-<area shape="rect" id="node6" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operaÃ§Ãµes possiveis no sistema. " alt="" coords="695,81,876,108"/>
-<area shape="rect" id="node7" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a Ã¡rea de reserva de salas do laboratÃ³rio. " alt="" coords="432,93,647,120"/>
-<area shape="rect" id="node8" href="$classSistemaLinf.html#a17d5c1f1114a1ed28e17775c134351eb" title="Acessa Ã¡rea de modificaÃ§Ã£o de dados pessoais. " alt="" coords="453,145,625,186"/>
+<area shape="rect" id="node6" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operações possiveis no sistema. " alt="" coords="695,81,876,108"/>
+<area shape="rect" id="node7" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a área de reserva de salas do laboratório. " alt="" coords="432,93,647,120"/>
+<area shape="rect" id="node8" href="$classSistemaLinf.html#a17d5c1f1114a1ed28e17775c134351eb" title="Acessa área de modificação de dados pessoais. " alt="" coords="453,145,625,186"/>
 </map>

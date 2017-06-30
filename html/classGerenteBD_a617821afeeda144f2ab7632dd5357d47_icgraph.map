@@ -1,7 +1,7 @@
 <map id="GerenteBD::CancelaReserva" name="GerenteBD::CancelaReserva">
-<area shape="rect" id="node2" href="$classSistemaLinf.html#ac4312005ce0674d918f89b22836a92ee" title="Faz requisiÃ§Ã£o para cancelamento de reserva. " alt="" coords="240,5,443,32"/>
-<area shape="rect" id="node3" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a Ã¡rea de reserva de salas do laboratÃ³rio. " alt="" coords="491,5,705,32"/>
-<area shape="rect" id="node4" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operaÃ§Ãµes possiveis no sistema. " alt="" coords="753,5,935,32"/>
-<area shape="rect" id="node5" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execuÃ§Ã£o dos sistema. " alt="" coords="983,5,1104,32"/>
+<area shape="rect" id="node2" href="$classSistemaLinf.html#ac4312005ce0674d918f89b22836a92ee" title="Faz requisição para cancelamento de reserva. " alt="" coords="240,5,443,32"/>
+<area shape="rect" id="node3" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a área de reserva de salas do laboratório. " alt="" coords="491,5,705,32"/>
+<area shape="rect" id="node4" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operações possiveis no sistema. " alt="" coords="753,5,935,32"/>
+<area shape="rect" id="node5" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="983,5,1104,32"/>
 <area shape="rect" id="node6" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1152,5,1203,32"/>
 </map>

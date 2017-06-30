@@ -1,18 +1,18 @@
 <map id="SistemaLinf::_EfetuaLogin" name="SistemaLinf::_EfetuaLogin">
 <area shape="rect" id="node2" href="$classSistemaLinf.html#ae02bf5d72ed634c919512e8c80f8ca28" title="Limpa os caracteres da tela. " alt="" coords="234,140,398,167"/>
-<area shape="rect" id="node3" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instÃ¢ncia do usuÃ¡rio que navega no sistema. " alt="" coords="233,191,399,217"/>
-<area shape="rect" id="node14" href="$classGerenteLogin.html#a94bdb9e213ffdc0aa3219dad300801cb" title="Gera uma instÃ¢ncia de usuÃ¡rio. " alt="" coords="227,368,405,395"/>
+<area shape="rect" id="node3" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instância do usuário que navega no sistema. " alt="" coords="233,191,399,217"/>
+<area shape="rect" id="node14" href="$classGerenteLogin.html#a94bdb9e213ffdc0aa3219dad300801cb" title="Gera uma instância de usuário. " alt="" coords="227,368,405,395"/>
 <area shape="rect" id="node4" href="$classGerenteBD.html#ae5b9e1254a70db28a14118a9cb7bbabb" title="Verifica a existencia de usuario. " alt="" coords="470,165,645,192"/>
-<area shape="rect" id="node5" href="$classGerenteLogin.html#a76770a88d060e2ccd461a743db71fab8" title="Faz a verificaÃ§Ã£o de usuÃ¡rio via webcam. " alt="" coords="453,216,661,243"/>
-<area shape="rect" id="node6" href="$classGerenteBD.html#aee848e57a172b20998ada945c2d8f66a" title="Busca um usuÃ¡rio no banco de dados. " alt="" coords="470,419,645,445"/>
+<area shape="rect" id="node5" href="$classGerenteLogin.html#a76770a88d060e2ccd461a743db71fab8" title="Faz a verificação de usuário via webcam. " alt="" coords="453,216,661,243"/>
+<area shape="rect" id="node6" href="$classGerenteBD.html#aee848e57a172b20998ada945c2d8f66a" title="Busca um usuário no banco de dados. " alt="" coords="470,419,645,445"/>
 <area shape="rect" id="node10" href="$classUsuario.html#a51b15e0008a5fa1d0da0da509aa1701e" title="Getter do atributo matricula. " alt="" coords="727,107,875,133"/>
 <area shape="rect" id="node11" href="$classUsuario.html#a39534698541ca25dca335aa79ef6e42f" title="Getter do atributo nome. " alt="" coords="736,267,865,293"/>
 <area shape="rect" id="node12" href="$classGerenteBD.html#a83307478b300f18ad530bbae7a21c5cb" title="Verifica se a matricula confere com a senha. " alt="" coords="470,48,645,75"/>
-<area shape="rect" id="node13" href="$classGerenteLogin.html#a7ba85f5a3c41ce38e996b60d2ef4eb73" title="Faz a captura de novas fotos do usuÃ¡rio via webcam. " alt="" coords="458,99,657,141"/>
+<area shape="rect" id="node13" href="$classGerenteLogin.html#a7ba85f5a3c41ce38e996b60d2ef4eb73" title="Faz a captura de novas fotos do usuário via webcam. " alt="" coords="458,99,657,141"/>
 <area shape="rect" id="node7" href="$classUsuario.html#a120e068856b0e0a9e0db6e5a7e3c8555" title="Setter do atributo matricula. " alt="" coords="727,520,874,547"/>
 <area shape="rect" id="node8" href="$classUsuario.html#a392412fa31482a0a56fbca53d1f0bbb0" title="Setter do atributo nome. " alt="" coords="737,419,865,445"/>
 <area shape="rect" id="node9" href="$classUsuario.html#a172eab6b5e1cdd16bcf87c1ffec86917" title="Setter do atributo senha. " alt="" coords="735,469,866,496"/>
-<area shape="rect" id="node15" href="$classGerenteBD.html#a63f7f9bfe46b46806b21d5df2a8f34f0" title="Insere um novo usuÃ¡rio no banco de dados. " alt="" coords="471,317,644,344"/>
+<area shape="rect" id="node15" href="$classGerenteBD.html#a63f7f9bfe46b46806b21d5df2a8f34f0" title="Insere um novo usuário no banco de dados. " alt="" coords="471,317,644,344"/>
 <area shape="rect" id="node16" href="$classUsuario.html#a364e3001148916047ee9f74f46b89c67" title="Getter do atributo senha. " alt="" coords="735,368,867,395"/>
-<area shape="rect" id="node17" href="$classGerenteBD.html#a1d0efdc4bad2f2224eba2b2214477a7d" title="Executa as modificaÃ§Ãµes sobre usuÃ¡rio na base de dados. " alt="" coords="709,317,892,344"/>
+<area shape="rect" id="node17" href="$classGerenteBD.html#a1d0efdc4bad2f2224eba2b2214477a7d" title="Executa as modificações sobre usuário na base de dados. " alt="" coords="709,317,892,344"/>
 </map>

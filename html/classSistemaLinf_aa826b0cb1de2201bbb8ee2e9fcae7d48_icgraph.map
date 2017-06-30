@@ -1,7 +1,7 @@
 <map id="SistemaLinf::_ImprimeReservas" name="SistemaLinf::_ImprimeReservas">
-<area shape="rect" id="node2" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a Ã¡rea de reserva de salas do laboratÃ³rio. " alt="" coords="481,5,696,32"/>
-<area shape="rect" id="node6" href="$classSistemaLinf.html#a0414bcc2e81953f87acbb3ca80aab9ab" title="Faz requisiÃ§Ã£o para reserva de laboratÃ³rio. " alt="" coords="257,31,433,57"/>
-<area shape="rect" id="node3" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operaÃ§Ãµes possiveis no sistema. " alt="" coords="744,5,925,32"/>
-<area shape="rect" id="node4" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execuÃ§Ã£o dos sistema. " alt="" coords="973,5,1095,32"/>
+<area shape="rect" id="node2" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a área de reserva de salas do laboratório. " alt="" coords="481,5,696,32"/>
+<area shape="rect" id="node6" href="$classSistemaLinf.html#a0414bcc2e81953f87acbb3ca80aab9ab" title="Faz requisição para reserva de laboratório. " alt="" coords="257,31,433,57"/>
+<area shape="rect" id="node3" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operações possiveis no sistema. " alt="" coords="744,5,925,32"/>
+<area shape="rect" id="node4" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="973,5,1095,32"/>
 <area shape="rect" id="node5" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1143,5,1193,32"/>
 </map>

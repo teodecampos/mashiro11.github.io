@@ -780,7 +780,7 @@ INPUT                  =
 # possible encodings.
 # The default value is: UTF-8.
 
-INPUT_ENCODING         = ISO-8859-1
+INPUT_ENCODING         = UTF-8
 
 # If the value of the INPUT tag contains directories, you can use the
 # FILE_PATTERNS tag to specify one or more wildcard patterns (like *.cpp and
@@ -2332,7 +2332,7 @@ INTERACTIVE_SVG        = NO
 # found. If left blank, it is assumed the dot tool can be found in the path.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_PATH               =  D:\Users\x03849673103\Downloads\graphviz-2.38\release\bin
+DOT_PATH               =  
 
 # The DOTFILE_DIRS tag can be used to specify one or more directories that
 # contain dot files that are included in the documentation (see the \dotfile
