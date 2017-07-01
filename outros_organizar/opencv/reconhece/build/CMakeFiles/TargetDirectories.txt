@@ -1,0 +1,3 @@
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/reconhece/build/CMakeFiles/edit_cache.dir
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/reconhece/build/CMakeFiles/rebuild_cache.dir
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/reconhece/build/CMakeFiles/reconhece.dir

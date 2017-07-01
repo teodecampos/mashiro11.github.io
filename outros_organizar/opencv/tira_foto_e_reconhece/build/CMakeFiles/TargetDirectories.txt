@@ -1,0 +1,3 @@
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira_foto_e_reconhece/build/CMakeFiles/edit_cache.dir
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira_foto_e_reconhece/build/CMakeFiles/rebuild_cache.dir
+/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira_foto_e_reconhece/build/CMakeFiles/tiraFoto_e_Reconhece.dir

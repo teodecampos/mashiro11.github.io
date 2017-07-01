@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pc-desk/git/mashiro11.github.io/Main.cpp
+opencv2/opencv.hpp
+/home/pc-desk/git/mashiro11.github.io/opencv2/opencv.hpp
+opencv2/opencv.hpp
+-
+SistemaLinf.h
+/home/pc-desk/git/mashiro11.github.io/SistemaLinf.h
+
+/home/pc-desk/git/mashiro11.github.io/src/GerenteBD.cpp
+GerenteBD.h
+/home/pc-desk/git/mashiro11.github.io/src/GerenteBD.h
+
+/home/pc-desk/git/mashiro11.github.io/src/GerenteLogin.cpp
+GerenteLogin.h
+/home/pc-desk/git/mashiro11.github.io/src/GerenteLogin.h
+
+/home/pc-desk/git/mashiro11.github.io/src/Reserva.cpp
+Reserva.h
+/home/pc-desk/git/mashiro11.github.io/src/Reserva.h
+
+/home/pc-desk/git/mashiro11.github.io/src/SistemaLinf.cpp
+SistemaLinf.h
+/home/pc-desk/git/mashiro11.github.io/src/SistemaLinf.h
+
+/home/pc-desk/git/mashiro11.github.io/src/Usuario.cpp
+Usuario.h
+/home/pc-desk/git/mashiro11.github.io/src/Usuario.h
+
+/home/pc-desk/git/mashiro11.github.io/src/testeOpenCV.cpp
+iostream
+-
+GerenteLogin.h
+/home/pc-desk/git/mashiro11.github.io/src/GerenteLogin.h
+opencv2/opencv.hpp
+-
+

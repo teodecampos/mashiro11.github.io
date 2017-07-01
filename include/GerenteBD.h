@@ -1,5 +1,5 @@
-#ifndef GERENTE_BD 
-#define GERENTE_BD
+//#ifndef GERENTE_BD 
+//#define GERENTE_BD
 
 #include <iostream>
 #include <fstream>
@@ -155,7 +155,7 @@ private:
 	*	O mapeamento é feito priorizando a busca por data (chave), 
 	*	permitindo acesso aos registros de reservas daquele dia.
 	*/
-	static map<string, vector<Reserva>> dadosReservas;
+	static map<string, vector<Reserva> > dadosReservas;
 };
 
-#endif
+//#endif

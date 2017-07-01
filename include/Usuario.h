@@ -1,6 +1,6 @@
-#pragma once
-#ifndef __USUARIO__
-#define __USUARIO__
+//#pragma once
+//#ifndef __USUARIO__
+//#define __USUARIO__
 
 #include <iostream>
 #include <string>
@@ -45,7 +45,7 @@ public:
 	*	\brief Construtor de cópia.
 	*	\param user Usuario a ser copiado.
 	*/
-	Usuario(Usuario &user);
+	Usuario(const Usuario &user);
 
 	/*!
 	*	\brief Getter do atributo nome.
@@ -82,4 +82,4 @@ public:
 
 };
 
-#endif // !__USUARIO__
+//#endif // !__USUARIO__

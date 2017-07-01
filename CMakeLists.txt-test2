@@ -1,0 +1,23 @@
+
+
+cmake_minimum_required(VERSION 2.8)
+project(MainProject)
+
+
+
+file(GLOB helloworld_H
+    include/*.h
+)
+
+file(GLOB helloworld_CPP
+    src/*.cpp
+) 
+
+MESSAGE (${helloworld_H})
+
+
+add_executable(helloworld Main.cpp ${helloworld_H} ${helloworld_CPP})
+
+
+
+

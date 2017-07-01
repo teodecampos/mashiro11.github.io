@@ -156,7 +156,7 @@ void SistemaLinf::_ReservarLab() {
 	reserva.matricula = usuarioLogado.GetMatricula();
 	cout << "Reserva efetuada!" << endl;
 	GerenteBD::InsereReserva(usuarioLogado.GetMatricula(), reserva);
-	Sleep(3000);
+	//Sleep(3000);
 }
 
 void SistemaLinf::_ImprimeReservas(vector<Reserva> reservas) {
@@ -211,7 +211,7 @@ void SistemaLinf::_LimpaTela() {
 
 void SistemaLinf::_OpcaoInvalida() {
 	cout << "Opcao invalida!" << endl;
-	Sleep(3000);
+	//Sleep(3000);
 }
 
 void SistemaLinf::_Cabecalho() {

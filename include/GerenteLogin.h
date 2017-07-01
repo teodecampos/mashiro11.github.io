@@ -1,5 +1,5 @@
-#ifndef GERENTE_LOGIN
-#define GERENTE_LOGIN
+//#ifndef GERENTE_LOGIN
+//#define GERENTE_LOGIN
 
 
 #include <iostream>
@@ -8,13 +8,17 @@
 
 //#include <vector>
 
+//#include "Usuario.h"
+#include "GerenteBD.h"
 
 #ifdef __linux__ 
 	#include <unistd.h>
+	#include "opencv2/objdetect/objdetect.hpp"
+	#include "opencv2/imgproc/imgproc.hpp"
+	#include "opencv2/highgui/highgui.hpp"
+	#include "opencv2/videoio/videoio.hpp"
 #elif _WIN32
 	#include <windows.h>
-	#include "Usuario.h"
-	#include "GerenteBD.h"
 	#include "opencv2\objdetect\objdetect.hpp"
 	#include "opencv2\imgproc\imgproc.hpp"
 	#include "opencv2\highgui\highgui.hpp"
@@ -99,4 +103,4 @@ private:
 	void _mySleep(int);
 };
 
-#endif
+//#endif

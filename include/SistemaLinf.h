@@ -1,13 +1,13 @@
-#pragma once
-#ifndef __SistemaLinf__
-#define __SistemaLinf__
+//#pragma once
+//#ifndef __SistemaLinf__
+//#define __SistemaLinf__
 
 #include <iostream>
 
 #include "GerenteLogin.h"
-#include "GerenteBD.h"
-#include "Usuario.h"
-#include "Reserva.h"
+//#include "GerenteBD.h"
+//#include "Usuario.h"
+//#include "Reserva.h"
 
 using std::cout;
 using std::endl;
@@ -105,4 +105,4 @@ public:
 };
 
 
-#endif // SistemaLinf
+//#endif // SistemaLinf

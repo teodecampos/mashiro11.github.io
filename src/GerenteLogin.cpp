@@ -65,17 +65,20 @@ Usuario GerenteLogin::Credencia(string matricula) {
 
 bool GerenteLogin::_ReconheceFace(string matricula) {
 	
+	/**** Está funcionando
 	CascadeClassifier face_cascade;
-	string path("C:\\opencv\\build\\etc\\haarcascades\\");
-	face_cascade.load(path+"haarcascade_frontalface_alt.xml");
+	//string path("C:\\opencv\\build\\etc\\haarcascades\\");
+	//face_cascade.load(path+"haarcascade_frontalface_alt.xml");
+	if( !face_cascade.load( "haarcascade_frontalface_alt.xml" ) ){ cout << "--(!)Error loading face cascade: haarcascade_frontalface_alt.xml" << endl; return false; };
 
 	VideoCapture captureDevice;
-	captureDevice.open(0);
+	captureDevice.open("http://192.168.1.123:4747/mjpegfeed?640x480");
 
 	Mat captureFrame;
 	Mat grayscaleFrame;
+	String window_name = "Sistema Linf - UnB";
 
-	namedWindow("Sistema Linf - UnB",1);
+	
 
 	while (true) {
 		captureDevice >> captureFrame;
@@ -93,9 +96,14 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
 
 			rectangle(captureFrame, pt1, pt2, cvScalar(0, 255, 0, 0), 1, 8, 0);
 		}
-		imshow("sistema Linf - UnB", captureFrame);
-		waitKey(30);
+		imshow(window_name, captureFrame);
+		char c = (char)waitKey(10);
+        if( c == 27 ) {
+        	destroyAllWindows();
+        	break; 
+        } // escape
 	}
+	está funcionando **********/
 	/*VideoCapture capturaTeste(0);
 	if (!capturaTeste.isOpened()) {
 		cout << "Nao pode abrir a camera" << endl;

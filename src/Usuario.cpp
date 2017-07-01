@@ -9,7 +9,7 @@ Usuario::Usuario(string matricula, string nome) {
 	this->matricula = matricula;
 }
 
-Usuario::Usuario(Usuario &usuario) {
+Usuario::Usuario(const Usuario &usuario) {
 	this->nome = usuario.nome;
 	this->matricula = usuario.matricula;
 }

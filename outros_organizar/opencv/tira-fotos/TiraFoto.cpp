@@ -11,7 +11,6 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 #include <iostream>
-//#include <stdio.h>
 using namespace std;
 using namespace cv;
 
@@ -32,16 +31,27 @@ int detectaTiraFoto()
 	CascadeClassifier face_cascade;
 	CascadeClassifier eyes_cascade;
 	String window_name = "Capture - Face detection";
+	String path_fotos = "resources/fotos/";
 	    
     std::vector<Rect> faces;
    
     VideoCapture capture;
     Mat frame;
     Mat frame_gray;
+    		    //-- 1. Load the cascades
+    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; return -1; };
+    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; return -1; };
+    //-- 2. Read the video stream
+    capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
+
+    if ( ! capture.isOpened() ) { cout << "--(!)Error opening video capture\n"; return -1; }
     
     cout << "digite o nome da pasta: ";
     std::string pasta;
     cin >> pasta;
+
+    pasta = path_fotos + pasta;
+    cout << pasta << endl;
 
     #ifdef __linux__ 
 	    const char * c = pasta.c_str();
@@ -73,13 +83,7 @@ int detectaTiraFoto()
 		}
 	#endif
 
-		    //-- 1. Load the cascades
-    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; return -1; };
-    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; return -1; };
-    //-- 2. Read the video stream
-    capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
 
-    if ( ! capture.isOpened() ) { cout << "--(!)Error opening video capture\n"; return -1; }
 
 
     int contador_fotos = 0;
@@ -101,8 +105,11 @@ int detectaTiraFoto()
 	    face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) );
 	    for ( size_t i = 0; i < faces.size(); i++ )
 	    {
-	        Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
-	        ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2 ), 0, 0, 360, Scalar( 150, 0, 255 ), 4, 8, 0 );
+	        //Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
+	        //ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2 ), 0, 0, 360, Scalar( 150, 0, 255 ), 4, 8, 0 );
+	        Point pt1(faces[i].x + faces[i].width, faces[i].y + faces[i].height);
+			Point pt2(faces[i].x, faces[i].y);
+			rectangle(frame, pt1, pt2, cvScalar(0, 255, 0, 0), 1, 8, 0);
 	        Mat faceROI = frame_gray( faces[i] );
 	        std::vector<Rect> eyes;
 	        //-- In each face, detect eyes
@@ -126,7 +133,8 @@ int detectaTiraFoto()
 		        	if (seconds > 1 ){ /* Espera 1 seg*/
 		        		std::stringstream ss;
 		        		ss << pasta << "/" << contador_fotos << "-foto.png";
-		        		imwrite(ss.str(), frame_gray);
+		        		Mat myface = faceROI.clone();
+		        		imwrite(ss.str(), myface);
 		        		iniciar_contagem = 0;
 		        		contador_fotos += 1;
 		        		cout << "Foto: " << ss.str() << endl; 

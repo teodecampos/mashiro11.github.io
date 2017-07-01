@@ -1,0 +1,9 @@
+g++ Main.cpp Usuario.cpp Reserva.cpp GerenteBD.cpp GerenteLogin.cpp SistemaLinf.cpp -I ../include/  -o name `pkg-config --cflags --libs opencv` -std=c++11
+
+
+g++ src/Main.cpp src/Usuario.cpp src/Reserva.cpp src/GerenteBD.cpp src/GerenteLogin.cpp src/SistemaLinf.cpp -I include/  -o name `pkg-config --cflags --libs opencv` -std=c++11
+
+
+FUNCIONA
+
+g++ src/Main.cpp src/Usuario.cpp src/Reserva.cpp src/GerenteBD.cpp src/GerenteLogin.cpp src/SistemaLinf.cpp -I include/  -o name `pkg-config --cflags --libs opencv` -std=c++11
