@@ -1,0 +1,7 @@
+<map id="SistemaLinf::_ReservarLab" name="SistemaLinf::_ReservarLab">
+<area shape="rect" id="node2" href="$classGerenteBD.html#ac4a3132cc8f79fd3472358378c1cfe0c" title="Busca registros de reserva de acordo com o campo utilizado como critério de busca. ..." alt="" coords="243,5,420,32"/>
+<area shape="rect" id="node4" href="$classSistemaLinf.html#aa826b0cb1de2201bbb8ee2e9fcae7d48" title="Imprime na tela resultado da consulta de reservas. " alt="" coords="229,56,433,83"/>
+<area shape="rect" id="node5" href="$classUsuario.html#a51b15e0008a5fa1d0da0da509aa1701e" title="Getter do atributo matricula. " alt="" coords="257,107,405,133"/>
+<area shape="rect" id="node6" href="$classGerenteBD.html#a34f72b9c2114723a55c4582a73ce0afa" title="Salva um novo registro de reserva. " alt="" coords="244,157,419,184"/>
+<area shape="rect" id="node3" href="$classGerenteBD.html#ad0207347ebe1fc29ebfd11cec64e5211" title="Verifica se a data informada possui reservas. " alt="" coords="481,81,676,108"/>
+</map>

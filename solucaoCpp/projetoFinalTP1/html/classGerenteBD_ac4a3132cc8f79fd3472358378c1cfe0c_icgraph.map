@@ -1,7 +1,0 @@
-<map id="GerenteBD::BuscaReserva" name="GerenteBD::BuscaReserva">
-<area shape="rect" id="node2" href="$classSistemaLinf.html#a349a48f688ee38225cfbdd0c30484a03" title="Acessa a área de reserva de salas do laboratório. " alt="" coords="455,5,669,32"/>
-<area shape="rect" id="node6" href="$classSistemaLinf.html#a0414bcc2e81953f87acbb3ca80aab9ab" title="Faz requisição para reserva de laboratório. " alt="" coords="231,31,407,57"/>
-<area shape="rect" id="node3" href="$classSistemaLinf.html#a2b7a8bb723dfee53ce46e2ddfc170ad5" title="Fornece os principais conjuntos de operações possiveis no sistema. " alt="" coords="717,5,899,32"/>
-<area shape="rect" id="node4" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="947,5,1068,32"/>
-<area shape="rect" id="node5" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1116,5,1167,32"/>
-</map>

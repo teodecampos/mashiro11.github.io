@@ -1,6 +1,0 @@
-<map id="GerenteBD::InsereUsuario" name="GerenteBD::InsereUsuario">
-<area shape="rect" id="node2" href="$classUsuario.html#a51b15e0008a5fa1d0da0da509aa1701e" title="Getter do atributo matricula. " alt="" coords="244,5,392,32"/>
-<area shape="rect" id="node3" href="$classUsuario.html#a39534698541ca25dca335aa79ef6e42f" title="Getter do atributo nome. " alt="" coords="253,56,383,83"/>
-<area shape="rect" id="node4" href="$classUsuario.html#a364e3001148916047ee9f74f46b89c67" title="Getter do atributo senha. " alt="" coords="252,107,384,133"/>
-<area shape="rect" id="node5" href="$classGerenteBD.html#a1d0efdc4bad2f2224eba2b2214477a7d" title="Executa as modificações sobre usuário na base de dados. " alt="" coords="227,157,409,184"/>
-</map>

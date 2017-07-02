@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho 2 - TP1: projetoTP1_2</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho 2 - TP1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">projetoTP1_2 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Projeto final disciplina Técnicas de Programação 1</p>
+<h2>Documentação</h2>
+<p>A documentação foi gerada utilizando a ferramenta Doxygen, podendo ser acessada pelo link:</p>
+<p><a href="https://mashiro11.github.io/html/">https://mashiro11.github.io/html/</a></p>
+<h2>Introdução</h2>
+<p>Este projeto consiste em um sistema de controle de acesso para ser utilizado na entrada dos Laboratórios de Informática (Linf).</p>
+<p>Sendo que no momento do cadastramento de usuário são passados suas informações e logo após o sistema capta algumas fotos do rosto dessa pessoa com diferentes expressões faciais para que seja feita a validação de acesso.</p>
+<p>O reconhecimento facial é uma das técnicas mais utilizadas na biometria tanto para a segurança da informação como para segurança de nossa sociedade.</p>
+<p>Este trabalho implementa um software que reconhece uma imagem retirada através de um webcam ou câmera para reconhecer suas características e compará-las com as de um banco de dados.</p>
+<p>Foi utilizada a biblioteca OpenCV, biblioteca para a utilização de processamento de imagens de grande eficácia e por obter excelentes resultados no reconhecimento de características utilizando os HaarCascade.</p>
+<p>O software foi desenvolvido em c++.</p>
+<h2>Requisitos Linux:</h2>
+<p>Versão testada Ubuntu 16.04 LTS</p>
+<blockquote class="doxtable">
+<p>Compilador : </p>
+</blockquote>
+<p>g++ (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609</p>
+<p>Copyright (C) 2015 Free Software Foundation, Inc.</p>
+<blockquote class="doxtable">
+<p>Opencv 3.2.0-dev: </p>
+</blockquote>
+<p>Fonte: <a href="https://github.com/opencv/opencv">https://github.com/opencv/opencv</a></p>
+<p>Modulos extra: <a href="https://github.com/opencv/opencv_contrib">https://github.com/opencv/opencv_contrib</a></p>
+<h2>Requisitos Windows</h2>
+<blockquote class="doxtable">
+<p>Compilador G++ </p>
+</blockquote>
+<p>Baixe o MinGW acessando <a href="https://sourceforge.net/projects/mingw-w64/">SourceForge</a>, clique depois em Download e espere o download finalizar, execute o aplicativo. Prossiga com Next e escolha a configuração adequada, como uma versão mais recente e a arquitetura compatível. Clique em Next até finalizar a instalação. Será mostrado uma tela inicial mostrando informações do Projeto. Prossiga até chegar em uma tela para escolher os recursos que serão instalados, selecione mingw32-base e o mingw32-gcc-g++. Depois disso, clique em Instalattion &gt; Apply Changes.</p>
+<p>Agora será necessário adicionar o diretório de binários do MinGW na Path do Windows, para isso, clique no Iniciar, e depois clique com o botão direito em Computador, e em seguida em Propriedades. No lado esquerdo clique em Configurações avançadas do sistema. Clique agora em variáveis de ambiente. Ache a variável PATH, e clique em editar, no fim dela, adicione um “;” (ponto e vírgula), e coloque o diretório dos binários que foram instalados com o MinGW (geralmente em C: Files (x86)-w64). Para testar se deu certo, abra o Prompt de Comando e digite “g++”.</p>
+<blockquote class="doxtable">
+<p>.NET Framework </p>
+</blockquote>
+<p>Será utilizado nas próximas instalações o .NET Framework. Baixe acessando <a href="https://www.microsoft.com/net/download/framework">Microsoft</a>, escolha uma versão 4.3 ou superior e clique em Download. Execute e aceite os termos de contrato e em seguida clique em instalar, espere o download e a instalação finalizar.</p>
+<blockquote class="doxtable">
+<p>OpenCV </p>
+</blockquote>
+<p>Baixe o <a href="http://opencv.org/releases.html">OpenCV</a> versão 2.4.* de preferência ou acesse diretamente pela página do <a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.11/opencv-2.4.11.exe/download">SourceForge</a> que irá fazer o Download automaticamente. Depois abra e clique em extrair.</p>
+<p>Agora será necessário adicionar o diretório de binários do OpenCV na Path do Windows, para isso, clique no Iniciar, e depois clique com o botão direito em Computador, e em seguida em Propriedades. No lado esquerdo clique em Configurações avançadas do sistema. Clique agora em variáveis de ambiente. Em variáveis do sistema clique em Novo, defina o nome da variável como "OPENCV_DIR" sem aspas e o valor da variável como o diretório da build do OpenCV (ex. C:;). Ache a variável PATH, e clique em editar, no fim dela, adicione um “;” (ponto e vírgula), e coloque "%OPENCV_DIR%" ligado a continuação do diretório dos binários que foram instalados com o OpenCV (ex. OPENCV_DIR%;).</p>
+<blockquote class="doxtable">
+<p>Visual Studio IDE </p>
+</blockquote>
+<p>Para quem gosta do auxílio que uma IDE proporciona, sugiro baixar o <a href="https://www.visualstudio.com/pt-br/vs/cplusplus/?rr=https%3A%2F%2Fwww.google.com.br%2F">VisualStudio</a></p>
+<p>Veja aqui um <a href="http://www2.ic.uff.br/~crisnv/disciplinas/procImg/Tutorial_de_Instal_do_OpenCV.pdf">tutorial</a> instrutivo que irá deixar a IDE configurada para reconhecer a biblioteca OpenCV.</p>
+<h2>Build e Compilation</h2>
+<p>Baixe o <a href="https://cmake.org/download/">CMake</a> para a portabilidade do seu projeto após verificar o tipo de sistema de sua máquina e extraia os arquivos. Após a extração encontre o diretório binário do CMake e execute o programa cmake-gui. Após isso insira o caminho dos arquivos de código na primeira entrada e na segunda insira o caminho que irá ser armazenados os arquivos build do CMake. Clique em Configure e depois que nenhum erro for relatado, você pode clicar no botão Generate. E seu trabalho estará pronto.</p>
+<p>CMakeLists:</p>
+<div class="fragment"><div class="line">cmake_minimum_required (VERSION 2.6)</div><div class="line">project (tp1.2)</div><div class="line">add_executable(tp1.2 tp1.cpp)</div></div><!-- fragment --><p>Linha de comando utilizada:</p>
+<div class="fragment"><div class="line">cmake .</div></div><!-- fragment --><h2>Diagrama Casos de uso</h2>
+<p>Esse diagrama foi feito pensando nos principais atores presentes no laboratório. É também uma ideia inicial de modelagem do banco de dados.</p>
+<div class="image">
+<img src="imagens/diagrama_casos_de_uso.png" alt="Diagrama de casos de uso"/>
+</div>
+<p>Fonte:</p>
+<p><a href="https://yuml.me/diagram/scruffy/usecase/samples">https://yuml.me/diagram/scruffy/usecase/samples</a></p>
+<div class="fragment"><div class="line">[Professor]-(Reservar laboratório)</div><div class="line">[Professor]-(Acessar laboratório)</div><div class="line">[Professor]-(Criar cadastro de acesso)</div><div class="line">[Aluno]-(Criar cadastro de acesso)</div><div class="line">[Aluno]-(Acessar laboratório)</div><div class="line">[Funcionário]-(Criar cadastro de acesso)</div><div class="line">[Funcionário]-(Acessar laboratório)</div><div class="line">[Funcionário]-(Modificar cadastro de acesso)</div><div class="line">[Funcionário]-(Excluir cadastro de acesso)</div></div><!-- fragment --><h2>Diagrama de Atividades</h2>
+<p>Descreve o parte do sistema de reconhecimento de faces para permitir a entrada ou cadastrar uma pessoa no linf.</p>
+<div class="image">
+<img src="imagens/diagrama_atividade.png" alt="Diagrama de atividades"/>
+</div>
+<p>Fonte:</p>
+<p><a href="https://yuml.me/diagram/nofunky/activity/samples">https://yuml.me/diagram/nofunky/activity/samples</a></p>
+<div class="fragment"><div class="line">(start)-&gt;(Reconhecer_Face)-&gt;&lt;a&gt;[Ok]-&gt;(Permite_Acesso_Linf),</div><div class="line">&lt;a&gt;[Nao_identificado]-&gt;(Digita_login_senha)-&gt;(Atualiza_Cadastro)-&gt;(Permite_Acesso_Linf)-&gt;(end)</div></div><!-- fragment --><h2>Diagram de Sequência</h2>
+<p>Primeiro diagrama de sequência</p>
+<div class="image">
+<img src="imagens/diagrama_sequencia.png" alt="Diagrama de sequencia"/>
+</div>
+<p>Fonte:</p>
+<p><a href="https://www.websequencediagrams.com/">https://www.websequencediagrams.com/</a></p>
+<div class="fragment"><div class="line">title Sistema Trabalho 2</div><div class="line">User-&gt;SGBD: informar número de matrícula</div><div class="line">alt Matrícula encontrada</div><div class="line">    SGBD-&gt;SYSTEM: retorna fotos do User</div><div class="line">    User-&gt;SYSTEM: captura uma foto</div><div class="line">    SYSTEM-&gt;User: reconhece foto</div><div class="line">    alt foto Não reconhecida</div><div class="line">        User-&gt;SYSTEM: captura foto</div><div class="line">        SYSTEM-&gt;SGBD: armazena nova foto</div><div class="line">    end</div><div class="line">else Matrícula não encontrada</div><div class="line">    SGBD-&gt;User: cadastrar_User()</div><div class="line">    User-&gt;SGBD: informa dados()</div><div class="line">    User-&gt;SYSTEM: captura fotos()</div><div class="line">    SYSTEM-&gt;SGBD: armazena fotos()</div><div class="line">end</div><div class="line">SYSTEM-&gt;User: Validar User</div></div><!-- fragment --><h2>Diagrama de Classes</h2>
+<p>Primeiro diagrama de classes</p>
+<div class="image">
+<img src="imagens/diagrama_simplificado_de_classes.png" alt="diagrama simplificado de classes"/>
+</div>
+<h2>Diagrama de Sequência</h2>
+<div class="image">
+<img src="imagens/diagram.png" alt="diagrama sequencia"/>
+</div>
+<h2>Screenshots</h2>
+<ul>
+<li><div class="image">
+<img src="imagens/ss.png" alt="ss"/>
+</div>
+<br />
+</li>
+<li><div class="image">
+<img src="imagens/ss2.png" alt="ss2"/>
+</div>
+<br />
+</li>
+<li><div class="image">
+<img src="imagens/ss3.png" alt="ss3"/>
+</div>
+<br />
+</li>
+<li><div class="image">
+<img src="imagens/ss4.png" alt="ss4"/>
+</div>
+ </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

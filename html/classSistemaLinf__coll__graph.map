@@ -1,0 +1,5 @@
+<map id="SistemaLinf" name="SistemaLinf">
+<area shape="rect" id="node2" href="$classUsuario.html" title="Representa a instância do usuario que utiliza o sistema. " alt="" coords="5,366,121,561"/>
+<area shape="rect" id="node4" href="$classGerenteBD.html" title="Controla requisições ao banco de dados. " alt="" coords="164,329,307,597"/>
+<area shape="rect" id="node8" href="$classGerenteLogin.html" title="Credencia o usuário. " alt="" coords="331,373,510,553"/>
+</map>

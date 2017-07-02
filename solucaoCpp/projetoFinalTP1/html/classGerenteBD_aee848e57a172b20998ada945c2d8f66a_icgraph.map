@@ -1,6 +1,0 @@
-<map id="GerenteBD::BuscaUsuario" name="GerenteBD::BuscaUsuario">
-<area shape="rect" id="node2" href="$classGerenteLogin.html#a5abe6312f068245a8757f46005f85faf" title="Gera a instância do usuário que navega no sistema. " alt="" coords="228,5,393,32"/>
-<area shape="rect" id="node3" href="$classSistemaLinf.html#aaeba3f1f325e36dfc8718e1e5eee5e86" title="Responsavel por resolver o login do usuário. " alt="" coords="441,5,615,32"/>
-<area shape="rect" id="node4" href="$classSistemaLinf.html#abdde84e8ce18a7be36ea9546cf7ff5ed" title="Ambiente de execução dos sistema. " alt="" coords="663,5,784,32"/>
-<area shape="rect" id="node5" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="832,5,883,32"/>
-</map>

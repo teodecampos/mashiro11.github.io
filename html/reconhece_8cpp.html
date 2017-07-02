@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho 2 - TP1: Referência ao ficheiro outros_organizar/opencv/reconhece/reconhece.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho 2 - TP1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c3635ed722a5e6e6de0e6000af2b4415.html">outros_organizar</a></li><li class="navelem"><a class="el" href="dir_0df4428a7e51ca41e64b3c08b87e66d3.html">opencv</a></li><li class="navelem"><a class="el" href="dir_3798abbf9543bd3b21701d125d885d1a.html">reconhece</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro reconhece.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;opencv2/opencv.hpp&gt;</code><br />
+<code>#include &quot;opencv2/objdetect.hpp&quot;</code><br />
+<code>#include &quot;opencv2/videoio.hpp&quot;</code><br />
+<code>#include &quot;opencv2/highgui.hpp&quot;</code><br />
+<code>#include &quot;opencv2/imgproc.hpp&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;opencv2/core.hpp&quot;</code><br />
+<code>#include &quot;opencv2/face.hpp&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para reconhece.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconhece_8cpp__incl.png" border="0" usemap="#outros__organizar_2opencv_2reconhece_2reconhece_8cpp" alt=""/></div>
+<map name="outros__organizar_2opencv_2reconhece_2reconhece_8cpp" id="outros__organizar_2opencv_2reconhece_2reconhece_8cpp">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a6079220416e9a40882f29520856d6049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a6079220416e9a40882f29520856d6049">mySleep</a> (int sleepMs)</td></tr>
+<tr class="separator:a6079220416e9a40882f29520856d6049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a463b06273ddac50a1ac28acd68375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a49a463b06273ddac50a1ac28acd68375">read_csv</a> (const string &amp;filename, vector&lt; Mat &gt; &amp;images, vector&lt; int &gt; &amp;labels, char separator=';')</td></tr>
+<tr class="separator:a49a463b06273ddac50a1ac28acd68375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198456fb03ca2e20db7104f17e17b0e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a198456fb03ca2e20db7104f17e17b0e4">reconhece</a> (Mat frame, Ptr&lt; LBPHFaceRecognizer &gt; &amp;m)</td></tr>
+<tr class="separator:a198456fb03ca2e20db7104f17e17b0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
+<tr class="separator:ac0f2228420376f4db7e1274f2b41667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:aa0c889443480540842d1f8441f90317d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#aa0c889443480540842d1f8441f90317d">im_width</a></td></tr>
+<tr class="separator:aa0c889443480540842d1f8441f90317d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3babd95ac5875d4f59fea035ec655b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#aad3babd95ac5875d4f59fea035ec655b">im_height</a></td></tr>
+<tr class="separator:aad3babd95ac5875d4f59fea035ec655b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024b4164df13a5cbce90cb0543cb465e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a024b4164df13a5cbce90cb0543cb465e">dir</a> = &quot;/usr/share/opencv/haarcascades/&quot;</td></tr>
+<tr class="separator:a024b4164df13a5cbce90cb0543cb465e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943f47d0f211e011fbc096f815589800"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a943f47d0f211e011fbc096f815589800">face_cascade_name</a> = <a class="el" href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a> + &quot;haarcascade_frontalface_alt.xml&quot;</td></tr>
+<tr class="separator:a943f47d0f211e011fbc096f815589800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1d6eede229c96e8f22a4caf306e492"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#acb1d6eede229c96e8f22a4caf306e492">eyes_cascade_name</a> = <a class="el" href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a> + &quot;haarcascade_eye_tree_eyeglasses.xml&quot;</td></tr>
+<tr class="separator:acb1d6eede229c96e8f22a4caf306e492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aabdc311a65aaaede4d72fa8fe95494"><td class="memItemLeft" align="right" valign="top">CascadeClassifier&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#a1aabdc311a65aaaede4d72fa8fe95494">face_cascade</a></td></tr>
+<tr class="separator:a1aabdc311a65aaaede4d72fa8fe95494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1098de0662992fbc4c23e314074f4a2"><td class="memItemLeft" align="right" valign="top">CascadeClassifier&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#ab1098de0662992fbc4c23e314074f4a2">eyes_cascade</a></td></tr>
+<tr class="separator:ab1098de0662992fbc4c23e314074f4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda71c96968f828206e9ddd3c1dc70e6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reconhece_8cpp.html#aeda71c96968f828206e9ddd3c1dc70e6">window_name</a> = &quot;Capture - Face detection&quot;</td></tr>
+<tr class="separator:aeda71c96968f828206e9ddd3c1dc70e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="ac0f2228420376f4db7e1274f2b41667c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f2228420376f4db7e1274f2b41667c">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconhece_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph.png" border="0" usemap="#reconhece_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph" alt=""/></div>
+<map name="reconhece_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph" id="reconhece_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph">
+<area shape="rect" id="node2" href="reconhece_8cpp.html#a49a463b06273ddac50a1ac28acd68375" title="read_csv" alt="" coords="109,5,182,32"/>
+<area shape="rect" id="node3" href="reconhece_8cpp.html#a198456fb03ca2e20db7104f17e17b0e4" title="reconhece" alt="" coords="104,56,187,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6079220416e9a40882f29520856d6049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6079220416e9a40882f29520856d6049">&#9670;&nbsp;</a></span>mySleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mySleep </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sleepMs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49a463b06273ddac50a1ac28acd68375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a463b06273ddac50a1ac28acd68375">&#9670;&nbsp;</a></span>read_csv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read_csv </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>separator</em> = <code>';'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconhece_8cpp_a49a463b06273ddac50a1ac28acd68375_icgraph.png" border="0" usemap="#reconhece_8cpp_a49a463b06273ddac50a1ac28acd68375_icgraph" alt=""/></div>
+<map name="reconhece_8cpp_a49a463b06273ddac50a1ac28acd68375_icgraph" id="reconhece_8cpp_a49a463b06273ddac50a1ac28acd68375_icgraph">
+<area shape="rect" id="node2" href="reconhece_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="127,5,177,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a198456fb03ca2e20db7104f17e17b0e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198456fb03ca2e20db7104f17e17b0e4">&#9670;&nbsp;</a></span>reconhece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reconhece </td>
+          <td>(</td>
+          <td class="paramtype">Mat&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&lt; LBPHFaceRecognizer &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconhece_8cpp_a198456fb03ca2e20db7104f17e17b0e4_icgraph.png" border="0" usemap="#reconhece_8cpp_a198456fb03ca2e20db7104f17e17b0e4_icgraph" alt=""/></div>
+<map name="reconhece_8cpp_a198456fb03ca2e20db7104f17e17b0e4_icgraph" id="reconhece_8cpp_a198456fb03ca2e20db7104f17e17b0e4_icgraph">
+<area shape="rect" id="node2" href="reconhece_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="136,5,187,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a id="a024b4164df13a5cbce90cb0543cb465e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024b4164df13a5cbce90cb0543cb465e">&#9670;&nbsp;</a></span>dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String dir = &quot;/usr/share/opencv/haarcascades/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1098de0662992fbc4c23e314074f4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1098de0662992fbc4c23e314074f4a2">&#9670;&nbsp;</a></span>eyes_cascade</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CascadeClassifier eyes_cascade</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb1d6eede229c96e8f22a4caf306e492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1d6eede229c96e8f22a4caf306e492">&#9670;&nbsp;</a></span>eyes_cascade_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String eyes_cascade_name = <a class="el" href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a> + &quot;haarcascade_eye_tree_eyeglasses.xml&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aabdc311a65aaaede4d72fa8fe95494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aabdc311a65aaaede4d72fa8fe95494">&#9670;&nbsp;</a></span>face_cascade</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CascadeClassifier face_cascade</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a943f47d0f211e011fbc096f815589800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943f47d0f211e011fbc096f815589800">&#9670;&nbsp;</a></span>face_cascade_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String face_cascade_name = <a class="el" href="lib_8h.html#ab7996a945dad329e55ad689d6c2616cf">dir</a> + &quot;haarcascade_frontalface_alt.xml&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad3babd95ac5875d4f59fea035ec655b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3babd95ac5875d4f59fea035ec655b">&#9670;&nbsp;</a></span>im_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int im_height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0c889443480540842d1f8441f90317d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c889443480540842d1f8441f90317d">&#9670;&nbsp;</a></span>im_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int im_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeda71c96968f828206e9ddd3c1dc70e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda71c96968f828206e9ddd3c1dc70e6">&#9670;&nbsp;</a></span>window_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String window_name = &quot;Capture - Face detection&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
