@@ -1,9 +1,11 @@
 #ifndef GERENTE_LOGIN
 #define GERENTE_LOGIN
 
-
+#include <ctime>
 #include <iostream>
+#include <sstream>
 #include <string>
+#include <sys/stat.h>
 #include <stdio.h>
 
 //#include <vector>
@@ -94,6 +96,11 @@ private:
 	*	\brief Faz a captura de novas fotos do usuário via webcam.
 	*/
 	void _AtualizaBancoDeFotos();
+
+	/*!
+	*	\brief Detecta face e tira foto.
+	*/
+	int _detectaTiraFoto(string matricula);
 
 	
 	void _mySleep(int);
