@@ -3,8 +3,20 @@
 
 
 #include <iostream>
-#include <string>
-#include <stdio.h>
+#include <ctime>
+#include <sstream>      // std::stringstream
+#include <string>       // std::string
+#include <sys/stat.h>   // mkdir
+#include <fstream>  // ler arquivo csv
+
+#include "opencv2/core.hpp"
+#include "opencv2/face.hpp"
+
+
+#include "opencv2/objdetect/objdetect.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/videoio/videoio.hpp"
 
 //#include <vector>
 
@@ -13,19 +25,9 @@
 
 #ifdef __linux__ 
 	#include <unistd.h>
-	#include "opencv2/objdetect/objdetect.hpp"
-	#include "opencv2/imgproc/imgproc.hpp"
-	#include "opencv2/highgui/highgui.hpp"
-	#include "opencv2/videoio/videoio.hpp"
 #elif _WIN32
 	#include <windows.h>
-	#include "opencv2\objdetect\objdetect.hpp"
-	#include "opencv2\imgproc\imgproc.hpp"
-	#include "opencv2\highgui\highgui.hpp"
-	#include "opencv2\videoio\videoio.hpp"
 #endif
-
-
 
 using std::string;
 using std::cout;
@@ -34,6 +36,8 @@ using std::cin;
 using std::vector;
 
 using namespace cv;
+
+using namespace cv::face;
 
 /*!
 *	\brief Credencia o usuário.
@@ -99,8 +103,11 @@ private:
 	*/
 	void _AtualizaBancoDeFotos();
 
-	
+	bool _CriaBancoDeFotos(string matricula);
+
 	void _mySleep(int);
+
+	void _read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';');
 };
 
 //#endif

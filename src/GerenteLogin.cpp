@@ -28,6 +28,7 @@ Usuario GerenteLogin::NovoUsuario(string matricula) {
 	usuario.SetNome(nome);
 	usuario.SetSenha(senha);
 	GerenteBD::InsereUsuario(usuario);
+    _CriaBancoDeFotos(matricula);
 	return usuario;
 }
 
@@ -52,7 +53,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 			cin >> senha;
 			if (GerenteBD::ChecaUsuario(matricula, senha)) {
 				usuario = GerenteBD::BuscaUsuario(matricula);
-				_AtualizaBancoDeFotos(matricula);
+				_AtualizaBancoDeFotos();
 				DEBUG_PRINT("		Matricula: " << usuario.GetMatricula());
 				DEBUG_PRINT("		Nome: " << usuario.GetNome());
 			}
@@ -64,7 +65,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 }
 
 bool GerenteLogin::_ReconheceFace(string matricula) {
-	//cout << " INICO RECONHECE\n";
+	cout << " INICO RECONHECE\n";
     String face_cascade_name = "resources/haarcascade_frontalface_alt.xml";
     String eyes_cascade_name = "resources/haarcascade_eye_tree_eyeglasses.xml";
     CascadeClassifier face_cascade;
@@ -74,11 +75,14 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
     int prediction;
     
     //-- 1. Load the cascades
-    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade\n"; return false; };
-    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade\n"; return false; };
+    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade\n"; _mySleep(3000); return false; };
+    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade\n"; _mySleep(3000); return false; };
     //-- 2. Read the video stream
     capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
-    if ( ! capture.isOpened() ) { cout << "--(!)Error opening video capture\n"; return false; }
+    if ( ! capture.isOpened() ) { 
+        cout << "--(!)Error opening video capture\n"; 
+        _mySleep(3000); return false; 
+    }
 
     //$$$$$$$$$$$ cria csv
     system("python resources/cria_csv.py resources/fotos/");
@@ -91,10 +95,11 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
     // Read in the data. This can fail if no valid
     // input filename is given.
     try {
-        read_csv(path_fotos_csv, images, labels);
+        _read_csv(path_fotos_csv, images, labels);
     } catch (cv::Exception& e) {
         std::cerr << "Error opening file \"" << path_fotos_csv << "\". Reason: " << e.msg << endl;
         // nothing more we can do
+        _mySleep(3000);
         return false;
     }
     // Quit if there are not enough images for this demo.
@@ -117,6 +122,7 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
         if( frame.empty() )
         {
             printf(" --(!) No captured frame -- Break!");
+            _mySleep(3000);
             break;
         }
         //-- 3. Apply the classifier to the frame
@@ -169,18 +175,23 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
 	
 	if (prediction == atoi( matricula.c_str() )) {//caso reconheça pelo rosto
 		cout << "Usuario reconhecido. "<< endl;
-		mySleep(3000);
+		_mySleep(3000);
 		return true;
 	}
 	else {//caso contrario
 		cout << "Rosto nao reconhecido" << endl;
-		mySleep(3000);
+		_mySleep(3000);
 		return false;
 	}
 
 }
 
-bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
+void GerenteLogin::_AtualizaBancoDeFotos(){
+
+}
+
+bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
+    cout << "CRIA PASTA FOTOS\n";
 	String face_cascade_name =  "resources/haarcascade_frontalface_alt.xml";
     String eyes_cascade_name =  "resources/haarcascade_eye_tree_eyeglasses.xml";
     String path_fotos = "resources/fotos/";
@@ -195,12 +206,17 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
     Mat frame;
     Mat frame_gray;
                 //-- 1. Load the cascades
-    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; return false; };
-    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; return false; };
+    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; _mySleep(3000); return false; };
+    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; _mySleep(3000); return false; };
     //-- 2. Read the video stream
     capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
     // evita criar pasta vazia
-    if ( ! capture.isOpened() ) { cout << "--(!)Error opening video capture\n"; return false; }
+    if ( ! capture.isOpened() ) { 
+        cout << "--(!)Error opening video capture\n"; 
+        _mySleep(3000);
+        return false;
+        
+    }
     
     String pasta = path_fotos + matricula;
     //cout << pasta << endl;
@@ -217,9 +233,11 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
             std::cout << "Pasta criada, com sucesso\n";
         } else if (resp == -1) {
             std::cout << "A pasta ja existe. FIM!\n";
+            _mySleep(3000);
             return false;
         } else {
             std::cout << "Erro desconhecido.\n";
+            _mySleep(3000);
             return false;
         }
     #else // windows
@@ -228,10 +246,12 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
             std::cout << "Pasta criada, com sucesso\n";
         } else if (resp == -1) {
             std::cout << "A pasta ja existe. FIM!\n";
-            return 1;
+            _mySleep(3000);
+            return false;
         } else {
             std::cout << "Erro desconhecido.\n";
-            return -1;
+            _mySleep(3000);
+            return false;
         }
     #endif
 
@@ -245,7 +265,8 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
         if( frame.empty() )
         {
             printf(" --(!) No captured frame -- Break!");
-            exit(-1);
+            _mySleep(3000);
+            return false;
         }
         cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
         equalizeHist( frame_gray, frame_gray );
@@ -289,7 +310,7 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
                         cout << "Foto: " << ss.str() << endl; 
                         if (contador_fotos == 10){
                         	destroyAllWindows();
-                        	mySleep(3000);
+                        	_mySleep(3000);
                             cout << "Capturei 10 fotos. FIM.\n";
                             return true;
                         }
@@ -299,15 +320,10 @@ bool GerenteLogin::_AtualizaBancoDeFotos(string matricula) {
         }
         imshow( window_name, frame );
         // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-        char c = (char)waitKey(10);
-        if( c == 27 ) {
-            destroyAllWindows();
-            return false; 
-        } // escape
     }
 }
 
-void GerenteLogin::mySleep(int sleepMs)
+void GerenteLogin::_mySleep(int sleepMs)
 {
 #ifdef __linux__
     usleep(sleepMs * 1000);   // usleep takes sleep time in us (1 millionth of a second)
@@ -316,7 +332,7 @@ void GerenteLogin::mySleep(int sleepMs)
 #endif
 }
 
-void GerenteLogin::read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator) 
+void GerenteLogin::_read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator) 
 {
     std::ifstream file(filename.c_str(), ifstream::in);
     if (!file) {
