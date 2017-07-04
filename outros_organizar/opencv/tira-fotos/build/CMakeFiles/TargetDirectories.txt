@@ -1,3 +1,0 @@
-/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira-fotos/build/CMakeFiles/edit_cache.dir
-/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira-fotos/build/CMakeFiles/rebuild_cache.dir
-/home/pc-desk/git/mashiro11.github.io/outros_organizar/opencv/tira-fotos/build/CMakeFiles/TiraFoto.dir

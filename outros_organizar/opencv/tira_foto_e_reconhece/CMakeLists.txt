@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 2.8)
-project( TiraFoto )
-find_package( OpenCV REQUIRED )
-add_executable( tiraFoto_e_Reconhece junto.cpp )
-target_link_libraries( tiraFoto_e_Reconhece ${OpenCV_LIBS} )
