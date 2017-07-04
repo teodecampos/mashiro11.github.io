@@ -16,6 +16,33 @@ GerenteLogin::~GerenteLogin()
 {
 }
 
+string GerenteLogin::_digiteSenha(){
+    cout << "_Digite sua senha: " << endl;
+    string s;
+    #ifdef __linux__
+        termios oldt;
+        tcgetattr(STDIN_FILENO, &oldt);
+        termios newt = oldt;
+        newt.c_lflag &= ~ECHO;
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+        string s;
+        do{
+            getline(cin, s);
+        }while(s == "");
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    #else
+        HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE); 
+        DWORD mode = 0;
+        GetConsoleMode(hStdin, &mode);
+        SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT));
+        do{
+            getline(cin, s);
+        }while(s == "");
+        SetConsoleMode(hStdin, mode);
+    #endif
+    return s;
+}
+
 Usuario GerenteLogin::NovoUsuario(string matricula) {
 	Usuario usuario;
 	string nome;
@@ -49,8 +76,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 		else {//caso nao reconhecido
 			string senha;
 			cout << "Usuario nao reconhecido" << endl;
-			cout << "Digite sua senha: ";
-			cin >> senha;
+			senha = _digiteSenha();
 			if (GerenteBD::ChecaUsuario(matricula, senha)) {
 				usuario = GerenteBD::BuscaUsuario(matricula);
 				_AtualizaBancoDeFotos();

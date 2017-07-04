@@ -25,6 +25,7 @@
 
 #ifdef __linux__ 
 	#include <unistd.h>
+	#include <termios.h>
 #elif _WIN32
 	#include <windows.h>
 #endif
@@ -108,6 +109,8 @@ private:
 	void _mySleep(int);
 
 	void _read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';');
+
+	string _digiteSenha();
 };
 
 //#endif
