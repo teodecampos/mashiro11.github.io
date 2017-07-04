@@ -99,18 +99,27 @@ private:
 	*/
 	bool _ReconheceFace(string matricula);
 	
+	
+	void _AtualizaBancoDeFotos();
 	/*!
 	*	\brief Faz a captura de novas fotos do usuário via webcam.
 	*/
-	void _AtualizaBancoDeFotos();
-
 	bool _CriaBancoDeFotos(string matricula);
 
-	void _mySleep(int);
-
+	/*!
+	*	\brief Cria arquivo de identificação do banco de fotos
+	*/
 	void _read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';');
 
+	/*!
+	*	\brief Oculta characters digitados
+	*/
 	string _digiteSenha();
 };
+
+	/*!
+	*	\brief Função global para atraso de 3 segundos na tela
+	*/
+	void mySleep(int);
 
 //#endif

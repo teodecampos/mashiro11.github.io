@@ -32,8 +32,13 @@ void SistemaLinf::_EfetuaLogin() {
 	cin >> matricula;
 	Usuario usuario(GLog.Credencia(matricula));
 	if (usuario.GetNome() != "") {//usuario cadastrado
-		DEBUG_PRINT("Usuario logado com sucesso");
-		usuarioLogado = usuario;
+		if (usuario.GetSenha() != ""){
+			DEBUG_PRINT("Usuario logado com sucesso");
+			usuarioLogado = usuario;
+		} else {
+			cout << "Senha invalida!" << endl;
+			mySleep(3000);
+		}
 	}
 	else {//usuario não cadastrado
 		cout << "Usuario nao cadastrado" << endl;
@@ -156,7 +161,7 @@ void SistemaLinf::_ReservarLab() {
 	reserva.matricula = usuarioLogado.GetMatricula();
 	cout << "Reserva efetuada!" << endl;
 	GerenteBD::InsereReserva(usuarioLogado.GetMatricula(), reserva);
-	//Sleep(3000);
+	mySleep(3000);
 }
 
 void SistemaLinf::_ImprimeReservas(vector<Reserva> reservas) {
@@ -211,7 +216,7 @@ void SistemaLinf::_LimpaTela() {
 
 void SistemaLinf::_OpcaoInvalida() {
 	cout << "Opcao invalida!" << endl;
-	//Sleep(3000);
+	mySleep(3000);
 }
 
 void SistemaLinf::_Cabecalho() {

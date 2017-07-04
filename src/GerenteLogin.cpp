@@ -62,6 +62,8 @@ Usuario GerenteLogin::NovoUsuario(string matricula) {
 Usuario GerenteLogin::Credencia(string matricula) {
 	DEBUG_PRINT("GerenteLogin::Credencia - inicio");
 	Usuario usuario;
+    usuario.SetNome("fake");
+    usuario.SetSenha("");
 	if ( GerenteBD::ExisteUsuario(matricula) ) { //usuario cadastrado
 		DEBUG_PRINT("	Usuario cadastrado na base de dados");
 		if (_ReconheceFace(matricula)) {//reconhece o rosto
@@ -100,13 +102,13 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
     int prediction;
     
     //-- 1. Load the cascades
-    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade\n"; _mySleep(3000); return false; };
-    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade\n"; _mySleep(3000); return false; };
+    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade\n"; mySleep(3000); return false; };
+    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade\n"; mySleep(3000); return false; };
     //-- 2. Read the video stream
     capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
     if ( ! capture.isOpened() ) { 
         cout << "--(!)Error opening video capture\n"; 
-        _mySleep(3000); return false; 
+        mySleep(3000); return false; 
     }
 
     //$$$$$$$$$$$ cria csv
@@ -124,7 +126,7 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
     } catch (cv::Exception& e) {
         std::cerr << "Error opening file \"" << path_fotos_csv << "\". Reason: " << e.msg << endl;
         // nothing more we can do
-        _mySleep(3000);
+        mySleep(3000);
         return false;
     }
     // Quit if there are not enough images for this demo.
@@ -147,7 +149,7 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
         if( frame.empty() )
         {
             printf(" --(!) No captured frame -- Break!");
-            _mySleep(3000);
+            mySleep(3000);
             break;
         }
         //-- 3. Apply the classifier to the frame
@@ -200,12 +202,12 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
 	
 	if (prediction == atoi( matricula.c_str() )) {//caso reconheça pelo rosto
 		cout << "Usuario reconhecido. "<< endl;
-		_mySleep(3000);
+		mySleep(3000);
 		return true;
 	}
 	else {//caso contrario
 		cout << "Rosto nao reconhecido" << endl;
-		_mySleep(3000);
+		mySleep(3000);
 		return false;
 	}
 
@@ -231,14 +233,14 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
     Mat frame;
     Mat frame_gray;
                 //-- 1. Load the cascades
-    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; _mySleep(3000); return false; };
-    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; _mySleep(3000); return false; };
+    if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; mySleep(3000); return false; };
+    if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; mySleep(3000); return false; };
     //-- 2. Read the video stream
     capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
     // evita criar pasta vazia
     if ( ! capture.isOpened() ) { 
         cout << "--(!)Error opening video capture\n"; 
-        _mySleep(3000);
+        mySleep(3000);
         return false;
         
     }
@@ -258,11 +260,11 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
             std::cout << "Pasta criada, com sucesso\n";
         } else if (resp == -1) {
             std::cout << "A pasta ja existe. FIM!\n";
-            _mySleep(3000);
+            mySleep(3000);
             return false;
         } else {
             std::cout << "Erro desconhecido.\n";
-            _mySleep(3000);
+            mySleep(3000);
             return false;
         }
     #else // windows
@@ -271,11 +273,11 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
             std::cout << "Pasta criada, com sucesso\n";
         } else if (resp == -1) {
             std::cout << "A pasta ja existe. FIM!\n";
-            _mySleep(3000);
+            mySleep(3000);
             return false;
         } else {
             std::cout << "Erro desconhecido.\n";
-            _mySleep(3000);
+            mySleep(3000);
             return false;
         }
     #endif
@@ -290,7 +292,7 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
         if( frame.empty() )
         {
             printf(" --(!) No captured frame -- Break!");
-            _mySleep(3000);
+            mySleep(3000);
             return false;
         }
         cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
@@ -335,7 +337,7 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
                         cout << "Foto: " << ss.str() << endl; 
                         if (contador_fotos == 10){
                         	destroyAllWindows();
-                        	_mySleep(3000);
+                        	mySleep(3000);
                             cout << "Capturei 10 fotos. FIM.\n";
                             return true;
                         }
@@ -346,15 +348,6 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
         imshow( window_name, frame );
         // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     }
-}
-
-void GerenteLogin::_mySleep(int sleepMs)
-{
-#ifdef __linux__
-    usleep(sleepMs * 1000);   // usleep takes sleep time in us (1 millionth of a second)
-#else
-    Sleep(sleepMs);
-#endif
 }
 
 void GerenteLogin::_read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator) 
@@ -376,6 +369,14 @@ void GerenteLogin::_read_csv(const string& filename, vector<Mat>& images, vector
     }
 }
 
+void mySleep(int sleepMs)
+{
+#ifdef __linux__
+    usleep(sleepMs * 1000);   // usleep takes sleep time in us (1 millionth of a second)
+#else
+    Sleep(sleepMs);
+#endif
+}
 
 #ifdef DEBUG
 #undef DEBUG
