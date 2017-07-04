@@ -25,7 +25,6 @@ string GerenteLogin::_digiteSenha(){
         termios newt = oldt;
         newt.c_lflag &= ~ECHO;
         tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-        string s;
         do{
             getline(cin, s);
         }while(s == "");
