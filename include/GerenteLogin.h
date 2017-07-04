@@ -1,5 +1,5 @@
-//#ifndef GERENTE_LOGIN
-//#define GERENTE_LOGIN
+#ifndef GERENTE_LOGIN
+#define GERENTE_LOGIN
 
 
 #include <iostream>
@@ -122,4 +122,4 @@ private:
 	*/
 	void mySleep(int);
 
-//#endif
+#endif

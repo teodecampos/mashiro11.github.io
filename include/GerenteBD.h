@@ -1,5 +1,5 @@
-//#ifndef GERENTE_BD 
-//#define GERENTE_BD
+#ifndef GERENTE_BD 
+#define GERENTE_BD
 
 #include <iostream>
 #include <fstream>
@@ -158,4 +158,4 @@ private:
 	static map<string, vector<Reserva> > dadosReservas;
 };
 
-//#endif
+#endif

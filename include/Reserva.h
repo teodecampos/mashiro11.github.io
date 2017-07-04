@@ -1,6 +1,6 @@
-//#pragma once
-//#ifndef __RESERVA__
-//#define __RESERVA__
+#pragma once
+#ifndef __RESERVA__
+#define __RESERVA__
 
 #include <iostream>
 #include <string>
@@ -57,4 +57,4 @@ public:
 	*/
 	string matricula;
 };
-//#endif // __RESERVA__
+#endif // __RESERVA__

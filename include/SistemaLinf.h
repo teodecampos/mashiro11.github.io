@@ -1,6 +1,6 @@
-//#pragma once
-//#ifndef __SistemaLinf__
-//#define __SistemaLinf__
+#pragma once
+#ifndef __SistemaLinf__
+#define __SistemaLinf__
 
 #include <iostream>
 
@@ -105,4 +105,4 @@ public:
 };
 
 
-//#endif // SistemaLinf
+#endif // SistemaLinf

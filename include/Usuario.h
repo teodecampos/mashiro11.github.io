@@ -1,6 +1,6 @@
-//#pragma once
-//#ifndef __USUARIO__
-//#define __USUARIO__
+#pragma once
+#ifndef __USUARIO__
+#define __USUARIO__
 
 #include <iostream>
 #include <string>
@@ -82,4 +82,4 @@ public:
 
 };
 
-//#endif // !__USUARIO__
+#endif // !__USUARIO__
