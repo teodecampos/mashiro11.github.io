@@ -1,3 +1,0 @@
-/home/pc-desk/git/mashiro11.github.io/build/CMakeFiles/edit_cache.dir
-/home/pc-desk/git/mashiro11.github.io/build/CMakeFiles/rebuild_cache.dir
-/home/pc-desk/git/mashiro11.github.io/build/CMakeFiles/helloworld.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/helloworld.dir/Main.cpp.o CMakeFiles/helloworld.dir/src/GerenteBD.cpp.o CMakeFiles/helloworld.dir/src/Reserva.cpp.o CMakeFiles/helloworld.dir/src/GerenteLogin.cpp.o CMakeFiles/helloworld.dir/src/Usuario.cpp.o CMakeFiles/helloworld.dir/src/testeOpenCV.cpp.o CMakeFiles/helloworld.dir/src/SistemaLinf.cpp.o  -o helloworld -rdynamic 
