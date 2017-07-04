@@ -10,6 +10,8 @@ https://mashiro11.github.io/html/
 
 ## Introdução
 
+
+
 Este projeto consiste em um sistema de controle de acesso para ser utilizado na entrada dos Laboratórios de Informática (Linf). 
 
 Sendo que no momento do cadastramento de usuário são passados suas informações e logo após o sistema capta algumas fotos do rosto dessa pessoa com diferentes expressões faciais para que seja feita a validação de acesso.
@@ -29,6 +31,11 @@ Versão testada Ubuntu 16.04 LTS
 > Compilador :
 
 g++ (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+
+Para compilar no ambiente Linux, utilize a branch "ubuntu", com a seguinte linha de compilação:
+g++ src/Main.cpp src/Usuario.cpp src/Reserva.cpp src/GerenteBD.cpp src/GerenteLogin.cpp src/SistemaLinf.cpp -I include/  -o ProjetoTP1 `pkg-config --cflags --libs opencv` -std=c++11
+
+
 
 Copyright (C) 2015 Free Software Foundation, Inc.
 
