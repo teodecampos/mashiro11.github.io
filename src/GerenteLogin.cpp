@@ -68,7 +68,7 @@ Usuario GerenteLogin::Credencia(string matricula) {
 		DEBUG_PRINT("	Usuario cadastrado na base de dados");
 		if (_ReconheceFace(matricula)) {//reconhece o rosto
 			//reconheceu pelo rosto
-			//modifica a inst‚ncia de usuario
+			//modifica a inst√¢ncia de usuario
 			usuario = GerenteBD::BuscaUsuario(matricula);
 			DEBUG_PRINT("		Matricula: " << usuario.GetMatricula());
 			DEBUG_PRINT("		Nome: " << usuario.GetNome());
@@ -105,7 +105,8 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
     if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade\n"; mySleep(3000); return false; };
     if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade\n"; mySleep(3000); return false; };
     //-- 2. Read the video stream
-    capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
+    //capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
+	capture.open(0);
     if ( ! capture.isOpened() ) { 
         cout << "--(!)Error opening video capture\n"; 
         mySleep(3000); return false; 
@@ -200,7 +201,7 @@ bool GerenteLogin::_ReconheceFace(string matricula) {
         } // escape
     }
 	
-	if (prediction == atoi( matricula.c_str() )) {//caso reconheÁa pelo rosto
+	if (prediction == atoi( matricula.c_str() )) {//caso reconhe√ßa pelo rosto
 		cout << "Usuario reconhecido. "<< endl;
 		mySleep(3000);
 		return true;
@@ -236,7 +237,8 @@ bool GerenteLogin::_CriaBancoDeFotos(string matricula) {
     if( !face_cascade.load( face_cascade_name ) ){ cout << "--(!)Error loading face cascade: " << face_cascade_name << endl; mySleep(3000); return false; };
     if( !eyes_cascade.load( eyes_cascade_name ) ){ cout << "--(!)Error loading eyes cascade: " << eyes_cascade_name << endl; mySleep(3000); return false; };
     //-- 2. Read the video stream
-    capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
+    //capture.open( "http://192.168.1.123:4747/mjpegfeed?640x480" );
+	capture.open(0);
     // evita criar pasta vazia
     if ( ! capture.isOpened() ) { 
         cout << "--(!)Error opening video capture\n"; 
