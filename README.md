@@ -30,10 +30,10 @@ Versão testada Ubuntu 16.04 LTS
 
 > Compilador :
 
-g++ (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+  g++ (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
 
 Para compilar no ambiente Linux, utilize a branch "ubuntu", com a seguinte linha de compilação:
-g++ src/Main.cpp src/Usuario.cpp src/Reserva.cpp src/GerenteBD.cpp src/GerenteLogin.cpp src/SistemaLinf.cpp -I include/  -o ProjetoTP1 `pkg-config --cflags --libs opencv` -std=c++11
+  g++ src/Main.cpp src/Usuario.cpp src/Reserva.cpp src/GerenteBD.cpp src/GerenteLogin.cpp src/SistemaLinf.cpp -I include/  -o ProjetoTP1 `pkg-config --cflags --libs opencv` -std=c++11
 
 
 
